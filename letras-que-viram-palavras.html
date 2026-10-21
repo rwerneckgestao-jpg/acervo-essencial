@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Letras que Viram Palavras · caderno de alfabetização para imprimir | Acervo Essencial</title>
+<meta name="description" content="Caderno para imprimir com vogais, 10 famílias de sílabas, palavras, frases e primeiros textos, para crianças de 5 a 7 anos. 48 páginas, guia do adulto baseado em pesquisa e plano de 6 semanas.">
+<!-- SITE v03 · 21/10/2026 · links de compra em checkout.js -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Andika:wght@400;700&display=swap">
+<style>
+:root {
+  --petroleo: #1F5F7A; --coral: #E9694F; --mostarda: #F2B33D; --salvia: #7FB685;
+  --creme: #FFF8EE; --tinta: #22313A; --cinza: #5C6B74; --linha: #DCE3E6;
+  --petroleo-claro: #E3EFF4; --coral-claro: #FCE7E2; --mostarda-claro: #FDF1D8; --salvia-claro: #E7F2E8;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: #fff; color: var(--tinta); font: 18px/1.6 'Andika', 'Segoe UI', sans-serif; }
+h1, h2, h3, .btn, .selo b { font-family: 'Fredoka', 'Segoe UI', sans-serif; color: var(--petroleo); }
+h1 { font-size: clamp(36px, 6vw, 58px); line-height: 1.05; margin: 14px 0 18px; font-weight: 700; }
+h2 { font-size: clamp(28px, 4vw, 38px); line-height: 1.15; margin: 0 0 18px; font-weight: 600; }
+h3 { font-size: 21px; margin: 0 0 6px; font-weight: 600; }
+p { margin: 0 0 14px; }
+img { max-width: 100%; height: auto; display: block; }
+.box { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+section { padding: 64px 0; }
+.creme { background: var(--creme); }
+.azul { background: var(--petroleo-claro); }
+
+.topo { display: flex; align-items: center; justify-content: space-between; padding: 18px 20px; max-width: 1080px; margin: 0 auto; }
+.selo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.selo svg { width: 40px; height: 40px; }
+.selo b { font-size: 21px; }
+.topo a.link { color: var(--petroleo); font-weight: 700; text-decoration: none; font-size: 16px; }
+
+.hero { padding: 36px 0 64px; background: var(--creme); }
+.hero .box { display: grid; grid-template-columns: 1.05fr 1fr; gap: 40px; align-items: center; }
+.chip { display: inline-block; background: var(--coral); color: #fff; font-family: 'Fredoka'; font-weight: 500;
+  border-radius: 40px; padding: 5px 16px; font-size: 16px; }
+.sub { font-size: 20px; color: var(--tinta); }
+.btns { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+.btn { display: inline-block; text-decoration: none; font-weight: 600; font-size: 19px; border-radius: 14px; padding: 14px 26px;
+  border: 2px solid var(--coral); }
+.btn.cheio { background: var(--coral); color: #fff; }
+.btn.vazio { background: #fff; color: var(--coral); }
+.nota { font-size: 15px; color: var(--cinza); margin-top: 12px; }
+.hero img { border-radius: 18px; }
+
+.lista { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
+.lista li { position: relative; padding-left: 34px; }
+.lista li::before { content: "✓"; position: absolute; left: 0; top: 0; width: 24px; height: 24px; border-radius: 50%;
+  background: var(--salvia-claro); color: #2F7A3B; font-weight: 700; display: flex; align-items: center; justify-content: center; font-size: 14px; margin-top: 3px; }
+.lista.nao li::before { content: "–"; background: var(--coral-claro); color: var(--coral); }
+
+.duas { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+.trilha { display: grid; gap: 12px; }
+.etapa { display: grid; grid-template-columns: 44px 1fr; gap: 14px; align-items: center; background: #fff;
+  border-radius: 14px; padding: 14px 16px; border-left: 6px solid var(--c); }
+.etapa .n { width: 44px; height: 44px; border-radius: 50%; background: var(--c); color: #fff; font-family: 'Fredoka';
+  font-weight: 600; font-size: 20px; display: flex; align-items: center; justify-content: center; }
+.etapa p { margin: 0; font-size: 16px; color: var(--cinza); }
+.etapa b { font-family: 'Fredoka'; font-weight: 600; color: var(--tinta); font-size: 18px; }
+
+.passos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; counter-reset: p; }
+.passo { background: #fff; border: 1px solid var(--linha); border-radius: 16px; padding: 22px; }
+.passo::before { counter-increment: p; content: counter(p); font-family: 'Fredoka'; font-weight: 700; font-size: 34px; color: var(--mostarda); }
+
+.paginas { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 10px; }
+.paginas.p6 { grid-template-columns: repeat(6, 1fr); gap: 14px; }
+.ciencia { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin: 8px 0 14px; }
+.cc { background: #fff; border-radius: 16px; padding: 20px; border-top: 6px solid var(--petroleo); }
+.cc b { font-family: 'Fredoka'; font-weight: 600; color: var(--petroleo); font-size: 19px; }
+.cc p { font-size: 16px; margin: 8px 0 0; }
+.paginas figure { margin: 0; }
+.paginas img { border-radius: 8px; box-shadow: 0 8px 24px rgba(34, 49, 58, .14); border: 1px solid var(--linha); }
+.paginas figcaption { font-size: 15px; color: var(--cinza); margin-top: 8px; text-align: center; }
+
+.oferta { max-width: 620px; margin: 0 auto; background: #fff; border: 2px solid var(--petroleo); border-radius: 22px; padding: 32px; text-align: center; }
+.preco { font-family: 'Fredoka'; font-weight: 700; font-size: 52px; color: var(--petroleo); margin: 8px 0; }
+.oferta .lista { text-align: left; margin: 20px 0 26px; font-size: 17px; }
+
+.aviso { background: var(--mostarda-claro); border-radius: 14px; padding: 18px 20px; font-size: 16px; }
+details { background: #fff; border: 1px solid var(--linha); border-radius: 14px; padding: 16px 20px; margin-bottom: 12px; }
+summary { font-family: 'Fredoka'; font-weight: 600; font-size: 19px; color: var(--petroleo); cursor: pointer; }
+details p { margin: 10px 0 0; font-size: 17px; }
+
+.irmao { display: grid; grid-template-columns: 1fr 1.2fr; gap: 36px; align-items: center; }
+.irmao img { border-radius: 16px; }
+
+footer { background: var(--tinta); color: #CFD8DC; font-size: 14px; padding: 36px 0; }
+footer a { color: #fff; }
+
+.pendente { outline: 3px dashed #D7263D; outline-offset: 3px; }
+.pendente-tag { display: inline-block; background: #D7263D; color: #fff; font: 700 12px/1 sans-serif; border-radius: 4px; padding: 4px 6px; margin-left: 6px; vertical-align: middle; }
+
+@media (max-width: 820px) {
+  body { font-size: 17px; }
+  section { padding: 48px 0; }
+  .hero .box, .duas, .irmao { grid-template-columns: 1fr; gap: 28px; }
+  .passos { grid-template-columns: 1fr; }
+  .paginas, .paginas.p6 { grid-template-columns: 1fr 1fr; }
+  .ciencia { grid-template-columns: 1fr; }
+  .btn { width: 100%; text-align: center; }
+  .oferta { padding: 24px 18px; }
+}
+
+.menu { display: flex; gap: 18px; flex-wrap: wrap; }
+.menu a { color: var(--petroleo); font-weight: 700; text-decoration: none; font-size: 16px; }
+.cards { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+.card { background: #fff; border: 1px solid var(--linha); border-radius: 22px; overflow: hidden; display: flex; flex-direction: column; }
+.card img { background: var(--creme); }
+.card .in { padding: 24px 26px 28px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
+.card .lista { font-size: 16px; margin: 10px 0 18px; }
+.card .btns { margin-top: auto; }
+.card .valor { font-family: 'Fredoka'; font-weight: 700; font-size: 30px; color: var(--petroleo); }
+.tres { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; counter-reset: p; }
+.escolha { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.escolha div { background: #fff; border-radius: 16px; padding: 22px; border-left: 6px solid var(--c); }
+.escolha.q4 { grid-template-columns: 1fr 1fr; }
+.kit { background: #fff; border: 3px solid var(--coral); border-radius: 26px; overflow: hidden; display: grid; grid-template-columns: 1.1fr 1fr; }
+.kit > img { width: 100%; height: 100%; object-fit: contain; background: #D6E8EA; }
+.kit .in { padding: 30px 32px 32px; }
+.conta { width: 100%; border-collapse: collapse; margin: 16px 0 6px; font-size: 17px; }
+.conta td { padding: 7px 0; border-bottom: 1px solid var(--linha); }
+.conta td:last-child { text-align: right; white-space: nowrap; }
+.conta tr.soma td { font-weight: 700; border-bottom: 0; }
+.kit .preco { font-size: 56px; margin: 6px 0 0; }
+.economia { display: inline-block; background: var(--salvia-claro); color: #2F7A3B; font-weight: 700; border-radius: 999px; padding: 6px 14px; font-size: 16px; }
+.faixa-kit { background: var(--coral-claro); border-radius: 20px; padding: 22px 26px; display: flex; gap: 22px; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+.faixa-kit p { margin: 4px 0 0; }
+@media (max-width: 820px) { .cards, .tres, .escolha, .escolha.q4, .kit { grid-template-columns: 1fr; } .menu { gap: 12px; } .kit .in { padding: 22px 18px 24px; } }
+</style>
+</head>
+<body>
+<header class="topo">
+  <a class="selo" href="index.html"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <title>Acervo Essencial — símbolo</title>
+  <path d="M60 6 Q62.2 17.8 74 20 Q62.2 22.2 60 34 Q57.8 22.2 46 20 Q57.8 17.8 60 6 Z" fill="#F2B33D"/>
+  <path d="M58 46 C45 38 30 36 14 38 L14 96 C30 94 45 96 58 104 Z" fill="#1F5F7A"/>
+  <path d="M62 46 C75 38 90 36 106 38 L106 96 C90 94 75 96 62 104 Z" fill="#E9694F"/>
+  <path d="M24 52 C33 51 41 53 48 57 M24 64 C33 63 41 65 48 69 M24 76 C33 75 41 77 48 81" stroke="#FFF8EE" stroke-width="3.2" stroke-linecap="round" fill="none" opacity=".85"/>
+  <circle cx="84" cy="66" r="9" fill="#FFF8EE" opacity=".9"/>
+</svg><b>Acervo Essencial</b></a>
+  <nav class="menu"><a href="index.html#cadernos">Os cadernos</a><a href="index.html#kit">Kit completo</a>
+  <a href="index.html#amostra">Amostra grátis</a></nav>
+</header>
+
+<section class="hero">
+  <div class="box">
+    <div>
+      <span class="chip" style="background:var(--petroleo)">Alfabetização · 5 a 7 anos</span>
+      <h1>Letras que Viram Palavras</h1>
+      <p class="sub">Das vogais aos primeiros textos, um degrau por vez. São 48 páginas para imprimir, com um guia para o adulto
+      baseado no que a pesquisa mostra sobre o ensino das letras e dos sons.</p>
+      <div class="btns">
+        <a class="btn cheio" href="#comprar">Quero o caderno por R$ 19,90</a>
+        <a class="btn vazio" href="index.html#amostra">Baixar a amostra grátis</a>
+      </div>
+      <p class="nota">PDF de 48 páginas em A4. Imprime em casa quantas vezes quiser.</p>
+    </div>
+    <img src="paginas_P02_v02.png" alt="Capa e páginas do caderno Letras que Viram Palavras" width="1080" height="880">
+  </div>
+</section>
+
+<section>
+  <div class="box duas">
+    <div>
+      <h2>A criança conhece as letras, mas ainda não lê?</h2>
+      <p>Conhecer o nome das letras não basta. Para ler, a criança precisa descobrir que cada letra representa um som e
+      que esses sons se juntam: <b>B com A faz BA</b>. Os especialistas chamam essa descoberta de <b>princípio alfabético</b>.</p>
+      <p>Sem uma ordem clara, ela fica entre folhinhas soltas, adivinha palavras pelo desenho e se frustra.</p>
+    </div>
+    <div>
+      <h2>O caderno dá o caminho</h2>
+      <ul class="lista">
+        <li><b>Você sabe o que fazer.</b> Um guia de 6 páginas explica o método, a pesquisa, a BNCC e como ajudar em cada erro comum.</li>
+        <li><b>Uma ordem clara.</b> Vogais, 10 famílias de sílabas, palavras, frases e textos.</li>
+        <li><b>Um plano pronto.</b> Seis semanas, uma atividade por dia, de 10 a 15 minutos.</li>
+        <li><b>Leitura e escrita juntas.</b> A criança lê, escreve, monta palavras com sílabas móveis e lê os primeiros textos.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="azul">
+  <div class="box">
+    <h2>Feito a partir do que a pesquisa mostra</h2>
+    <p>O guia do adulto resume, em linguagem simples, o que estudos sobre alfabetização encontraram. As referências completas estão no caderno.</p>
+    <div class="ciencia">
+      <div class="cc"><b>Ehri e colaboradores (2001)</b><p>A análise do National Reading Panel reuniu 38 experimentos. Ensinar de forma sistemática a relação entre letras e sons ajudou as crianças a ler melhor, com efeito maior quando o ensino começou cedo, e os benefícios apareceram também na escrita e na compreensão.</p></div>
+      <div class="cc"><b>Hulme e colaboradores (2012)</b><p>O conhecimento das relações entre letras e sons e a consciência dos fonemas são duas influências causais no início da leitura. O caderno trabalha os dois juntos.</p></div>
+      <div class="cc"><b>BNCC, 1º ano</b><p>As atividades se relacionam com EF01LP02 (escrever palavras e frases de forma alfabética), EF01LP05 (escrita como representação dos sons da fala), EF01LP12 (espaços entre palavras) e EF12LP01 (ler palavras novas com precisão).</p></div>
+    </div>
+    <p class="nota">A pesquisa mostra o efeito médio de programas bem conduzidos. Nenhum material garante um resultado individual.</p>
+  </div>
+</section>
+
+<section class="creme">
+  <div class="box duas">
+    <div>
+      <h2>O que tem dentro</h2>
+      <ul class="lista">
+        <li><b>Guia do adulto (6 páginas):</b> como a criança aprende a ler, o que diz a pesquisa, as 6 etapas e a BNCC, roteiro da sessão, erros comuns e quando procurar um profissional</li>
+        <li><b>Ponto de partida e de chegada:</b> cartão de leitura e ditado, para comparar</li>
+        <li><b>Plano de 6 semanas,</b> de segunda a sexta</li>
+        <li><b>26 atividades</b> nas 6 etapas, com as respostas para o adulto</li>
+        <li><b>Sílabas móveis</b> para recortar (55 peças) e <b>bingo das sílabas</b></li>
+        <li><b>Ficha de acompanhamento e certificado</b></li>
+        <li><b>Bônus:</b> alfabeto ilustrado, banco de palavras e 10 brincadeiras para ler e escrever sem caderno</li>
+      </ul>
+    </div>
+    <div class="trilha"><div class="etapa" style="--c:var(--coral)"><span class="n">1</span><div><b>Vogais</b><p>Som, traçado, maiúscula e minúscula.</p></div></div><div class="etapa" style="--c:var(--mostarda)"><span class="n">2</span><div><b>Primeiras famílias</b><p>P, B, M, T e L: consoante + vogal.</p></div></div><div class="etapa" style="--c:var(--salvia)"><span class="n">3</span><div><b>Novas famílias</b><p>V, F, S, N e D.</p></div></div><div class="etapa" style="--c:var(--petroleo)"><span class="n">4</span><div><b>Palavras</b><p>Ler, escrever e trocar sílabas.</p></div></div><div class="etapa" style="--c:var(--coral)"><span class="n">5</span><div><b>Frases</b><p>Ler, completar, montar e separar.</p></div></div><div class="etapa" style="--c:var(--mostarda)"><span class="n">6</span><div><b>Pequenos textos</b><p>Ler, responder e escrever a primeira frase.</p></div></div></div>
+  </div>
+</section>
+
+<section>
+  <div class="box">
+    <h2>Veja por dentro</h2>
+    <p>Estas são páginas reais do caderno, do jeito que saem na impressora.</p>
+    <div class="paginas p6"><figure><img src="p2_pag4.png" alt="Guia: como a criança aprende" loading="lazy"><figcaption>Guia: como a criança aprende</figcaption></figure><figure><img src="p2_pag11.png" alt="Plano de 6 semanas" loading="lazy"><figcaption>Plano de 6 semanas</figcaption></figure><figure><img src="p2_pag16.png" alt="Família do P" loading="lazy"><figcaption>Família do P</figcaption></figure><figure><img src="p2_pag29.png" alt="Troque a sílaba" loading="lazy"><figcaption>Troque a sílaba</figcaption></figure><figure><img src="p2_pag35.png" alt="Texto: O sapo" loading="lazy"><figcaption>Texto: O sapo</figcaption></figure><figure><img src="p2_pag45.png" alt="Alfabeto ilustrado" loading="lazy"><figcaption>Alfabeto ilustrado</figcaption></figure></div>
+  </div>
+</section>
+
+<section class="azul">
+  <div class="box duas">
+    <div>
+      <h2>Para quem é</h2>
+      <ul class="lista">
+        <li>Mães, pais e responsáveis de crianças de 5 a 7 anos que estão começando a ler</li>
+        <li>Professoras do fim da Educação Infantil e do 1º ano</li>
+        <li>Profissionais que querem um material pronto e em sequência para os atendimentos</li>
+      </ul>
+    </div>
+    <div>
+      <h2>Antes deste caderno</h2>
+      <p>Se a criança ainda não acha rimas nem separa as palavras em sílabas falando, comece pelo
+      <a href="brincando-com-os-sons.html">Brincando com os Sons</a>, que treina a escuta dos sons.</p>
+      <p class="aviso"><b>Importante:</b> material pedagógico de apoio. Não faz diagnóstico e não substitui professor, psicopedagogo ou fonoaudiólogo.</p>
+    </div>
+  </div>
+</section>
+
+<section id="comprar">
+  <div class="box">
+    <div class="oferta">
+      <span class="chip" style="background:var(--petroleo)">Caderno completo</span>
+      <h2 style="margin-top:14px">Letras que Viram Palavras</h2>
+      <div class="preco">R$ 19,90</div>
+      <p class="nota" style="margin-top:0">Pagamento único. Menos de R$ 0,42 por página.</p>
+      <ul class="lista">
+        <li>PDF de 48 páginas em A4</li>
+        <li>Guia do adulto de 6 páginas, com base em pesquisa e na BNCC</li>
+        <li>Avaliação de início e fim, plano de 6 semanas e 26 atividades em 6 etapas</li>
+        <li>Sílabas móveis, bingo das sílabas, ficha e certificado</li>
+        <li>Bônus: alfabeto ilustrado, banco de palavras e 10 brincadeiras</li>
+        <li>Imprima quantas vezes quiser</li>
+      </ul>
+      <a class="btn cheio" data-checkout="p02" href="#amostra" style="width:100%;text-align:center">Quero o caderno</a>
+      <p class="nota">Compra processada pela Eduzz.<br>Você tem 7 dias para desistir da compra, conforme o Código de Defesa do Consumidor.</p>
+    </div>
+  </div>
+</section>
+
+
+<section>
+  <div class="box">
+    <div class="faixa-kit">
+      <div><b style="font-family:'Fredoka';font-size:22px;color:var(--petroleo)">Leve os 4 cadernos por R$ 39,90</b>
+      <p>O Kit Completo traz este caderno e também Brincando com os Sons, Cobra e Abelha e Olhos Atentos. Separados, os quatro custam R$ 79,60.</p></div>
+      <a class="btn cheio" href="index.html#kit">Ver o Kit Completo</a>
+    </div>
+  </div>
+</section>
+<section class="azul">
+  <div class="box">
+    <h2>Perguntas frequentes</h2>
+    <details><summary>Com que idade usar?</summary><p>Em geral, de 5 a 7 anos. Mais do que a idade, vale o ponto de partida: o caderno traz uma avaliação para ver por onde começar.</p></details>
+    <details><summary>Quanto tempo por dia?</summary><p>De 10 a 15 minutos, uma atividade por dia, de segunda a sexta. O plano de 6 semanas já vem pronto.</p></details>
+    <details><summary>Usa letra cursiva?</summary><p>Não. O caderno usa letra de imprensa, maiúscula e minúscula. A cursiva fica para depois, quando a leitura estiver firme.</p></details>
+    <details><summary>O conteúdo tem base científica?</summary><p>Sim. O guia do adulto resume estudos sobre o ensino sistemático das relações entre letras e sons e relaciona cada etapa às habilidades da BNCC. As referências estão na última página.</p></details>
+    <details><summary>Posso usar com minha turma ou com meus pacientes?</summary><p>Sim, cada licença é de uso individual de quem comprou: você pode imprimir para usar com seus alunos ou pacientes. Não é permitido revender nem compartilhar o arquivo.</p></details>
+  </div>
+</section>
+<footer>
+  <div class="box">
+    <p><b style="color:#fff">Acervo Essencial</b> · materiais para aprender brincando</p>
+    <p>Ilustrações dos cadernos: Twemoji, © Twitter, Inc. e colaboradores, licença CC-BY 4.0. Fontes Fredoka e Andika, licença SIL Open Font License 1.1.</p>
+    <p>Pagamento, entrega e dados do vendedor são processados pela Eduzz. Este site não usa cookies de rastreamento nem coleta dados pessoais.</p>
+  </div>
+</footer>
+<script src="checkout.js"></script>
+</body>
+</html>

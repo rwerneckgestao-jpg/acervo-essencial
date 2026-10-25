@@ -3,6 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <title>Cobra e Abelha · atividades para os sons do S e do Z para imprimir | Acervo Essencial</title>
 <meta name="description" content="Caderno para imprimir com atividades para ouvir e falar o som de S e o som de Z, para crianças de 4 a 7 anos. 42 páginas, guia do adulto baseado em pesquisa e plano de 6 semanas.">
 <meta property="og:type" content="website">
@@ -60,9 +63,9 @@ section { padding: 64px 0; }
 
 .lista { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
 .lista li { position: relative; padding-left: 34px; }
-.lista li::before { content: "✓"; position: absolute; left: 0; top: 0; width: 24px; height: 24px; border-radius: 50%;
+.lista li::before { content: ""; position: absolute; left: 0; top: 0; width: 24px; height: 24px; border-radius: 50%;
   background: var(--salvia-claro); color: #2F7A3B; font-weight: 700; display: flex; align-items: center; justify-content: center; font-size: 14px; margin-top: 3px; }
-.lista.nao li::before { content: "–"; background: var(--coral-claro); color: var(--coral); }
+.lista.nao li::before { content: ""; background: var(--coral-claro); color: var(--coral); }
 
 .duas { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
 .trilha { display: grid; gap: 12px; }
@@ -145,18 +148,8 @@ footer a { color: #fff; }
 /* v04: apelo emocional */
 .faixa-topo { background: var(--petroleo); color: #fff; text-align: center; font: 600 15px/1.4 'Fredoka', sans-serif; padding: 9px 16px; }
 .faixa-topo b { color: var(--mostarda); }
-.hero2 { position: relative; min-height: 640px; display: flex; align-items: center; color: #fff; overflow: hidden; background: #2b2b2b; }
-.hero2 > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 70% 30%; }
-.hero2::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(20,45,58,.92) 0%, rgba(20,45,58,.75) 45%, rgba(20,45,58,.1) 80%); }
-.hero2 .box { position: relative; z-index: 1; width: 100%; }
-.hero2 .txt { max-width: 560px; }
-.hero2 h1 { color: #fff; font-size: clamp(38px, 6vw, 62px); }
-.hero2 h1 em { font-style: normal; color: var(--mostarda); }
-.hero2 .sub { color: #F3F6F7; font-size: 21px; }
-.hero2 .btn.vazio { background: transparent; color: #fff; border-color: #fff; }
-.hero2 .nota { color: #DDE6EA; }
 .selos { display: flex; flex-wrap: wrap; gap: 10px 18px; margin-top: 18px; font-size: 15px; color: #fff; }
-.selos span::before { content: "✓ "; color: var(--mostarda); font-weight: 700; }
+.selos span::before { content: ""; color: var(--mostarda); font-weight: 700; }
 .btn.grande { font-size: 21px; padding: 18px 30px; box-shadow: 0 10px 26px rgba(233,105,79,.35); }
 .dor { background: var(--creme); }
 .dor .grade { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 22px 0; }
@@ -175,7 +168,7 @@ footer a { color: #fff; }
 .profs .grade { display: grid; grid-template-columns: 1.4fr 1fr; gap: 26px; align-items: stretch; }
 .profs figure { margin: 0; position: relative; border-radius: 22px; overflow: hidden; }
 .profs figure img { width: 100%; height: 100%; object-fit: cover; }
-.profs figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 18px 20px; background: linear-gradient(transparent, rgba(0,0,0,.75)); font-family: 'Fredoka'; font-size: 19px; }
+.profs figcaption { font-family: 'Fredoka'; font-size: 17px; color: var(--tinta); padding: 12px 4px 2px; }
 .profs .lista li::before { background: rgba(255,255,255,.15); color: var(--mostarda); }
 .fecho { position: relative; color: #fff; overflow: hidden; text-align: center; }
 .fecho > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
@@ -188,21 +181,38 @@ footer a { color: #fff; }
 .barra-cta b { font-family: 'Fredoka'; color: var(--petroleo); font-size: 18px; }
 .barra-cta .btn { width: auto; padding: 11px 18px; font-size: 17px; }
 @media (max-width: 820px) {
-  .hero2 { min-height: 0; padding: 300px 0 40px; align-items: flex-end; }
-  .hero2 > img { height: 380px; object-position: 60% 20%; }
-  .hero2::after { background: linear-gradient(180deg, rgba(20,45,58,0) 120px, rgba(20,45,58,.95) 360px, #142D3A 100%); }
   .dor .grade, .foto-txt, .foto-txt.inv, .profs .grade { grid-template-columns: 1fr; }
   .foto-txt.inv img { order: -1; }
   .barra-cta { display: flex; }
   body { padding-bottom: 70px; }
 }
+
+/* v05: ícones em SVG (sem emoji), cantos discretos, sem fotos */
+.lista li::before { content: ""; background: var(--salvia-claro) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M3 8.5l3.2 3.2L13 4.8' fill='none' stroke='%232F7A3B' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 14px no-repeat; }
+.lista.nao li::before { content: ""; background: var(--coral-claro) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4 8h8' fill='none' stroke='%23E9694F' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 14px no-repeat; }
+.profs .lista li::before { background: rgba(255,255,255,.15) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M3 8.5l3.2 3.2L13 4.8' fill='none' stroke='%23F2B33D' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 14px no-repeat; }
+.selos span::before { content: ""; display: inline-block; width: 14px; height: 14px; margin-right: 6px; vertical-align: -1px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M3 8.5l3.2 3.2L13 4.8' fill='none' stroke='%232F7A3B' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / contain no-repeat; }
+.chip { border-radius: 6px; }
+.economia, .garantia { border-radius: 8px; }
+.foto-txt img { aspect-ratio: auto; object-fit: contain; background: #fff; border: 1px solid var(--linha); border-radius: 10px; box-shadow: 0 14px 36px rgba(34,49,58,.16); max-width: 460px; margin: 0 auto; }
+.hero h1 em { font-style: normal; color: var(--coral); }
+.hero .selos { color: var(--tinta); }
+.profs .grade { grid-template-columns: 1fr 1fr; }
+.profs figure { background: #fff; border-radius: 14px; padding: 14px; }
+.profs figure img { height: auto; object-fit: contain; border: 1px solid var(--linha); border-radius: 6px; }
+.fecho { background: var(--petroleo); }
+.legal { max-width: 780px; }
+.legal h1 { font-size: clamp(32px, 5vw, 44px); }
+.legal h2 { font-size: 24px; margin-top: 34px; }
+.legal li { margin-bottom: 8px; }
+footer .links a { margin-right: 4px; }
 </style>
 </head>
 <body>
 <div class="faixa-topo">Leve os 4 cadernos por <b>R$ 39,90</b> no Kit Completo · <b>7 dias de garantia</b></div>
 <header class="topo">
   <a class="selo" href="index.html"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
-  <title>Acervo Essencial — símbolo</title>
+  <title>Acervo Essencial, símbolo</title>
   <path d="M60 6 Q62.2 17.8 74 20 Q62.2 22.2 60 34 Q57.8 22.2 46 20 Q57.8 17.8 60 6 Z" fill="#F2B33D"/>
   <path d="M58 46 C45 38 30 36 14 38 L14 96 C30 94 45 96 58 104 Z" fill="#1F5F7A"/>
   <path d="M62 46 C75 38 90 36 106 38 L106 96 C90 94 75 96 62 104 Z" fill="#E9694F"/>
@@ -231,13 +241,13 @@ footer a { color: #fff; }
 
 <section class="dor">
   <div class="box foto-txt">
-    <img src="foto_fono.jpg" alt="Fonoaudióloga e menino sentindo a vibração da voz no pescoço" loading="lazy">
+    <img src="p3_pag13.jpg" alt="Página de atividade: o adulto fala o nome da figura e a criança circula a cobra ou a abelha" loading="lazy">
     <div>
       <h2>Quando a criança sente o som, ela aprende a falar</h2>
       <p style="font-size:19px">Mão no pescoço: no zumbido da abelha a garganta vibra, no chiado da cobra fica quieta. É assim, brincando e sentindo, que a troca do S pelo Z começa a mudar.</p>
       <p class="virada" style="font-size:24px">Usado em casa e como tarefa entre sessões de fonoaudiologia. Não substitui a avaliação de um profissional.</p>
       <div class="btns"><a class="btn cheio grande" href="#comprar">Quero o caderno · R$ 19,90</a></div>
-      <p class="garantia" style="margin-top:14px">🛡️ 7 dias de garantia</p>
+      <p class="garantia" style="margin-top:14px">7 dias de garantia</p>
     </div>
   </div>
 </section>
@@ -330,9 +340,10 @@ footer a { color: #fff; }
 </section>
 <footer>
   <div class="box">
-    <p><b style="color:#fff">Acervo Essencial</b> · materiais para aprender brincando</p>
-    <p>Ilustrações dos cadernos: Twemoji, © Twitter, Inc. e colaboradores, licença CC-BY 4.0. Fontes Fredoka e Andika, licença SIL Open Font License 1.1. As fotos deste site são ilustrativas, geradas por inteligência artificial; não mostram clientes reais.</p>
-    <p>Pagamento, entrega e dados do vendedor são processados pela Eduzz. Este site usa o Pixel da Meta (cookies) para medir visitas e anúncios. Não pedimos nem guardamos dados pessoais aqui. Dúvidas sobre compra, acesso ou reembolso: atendimento da Eduzz.</p>
+    <p><b style="color:#fff">Acervo Essencial</b> · materiais para aprender brincando · uma marca da Evox Produtos Digitais</p>
+    <p class="links"><a href="politica-de-privacidade.html">Política de privacidade</a> · <a href="termos-de-uso.html">Termos e condições</a> · Contato: <a href="mailto:r.werneckgestao@gmail.com">r.werneckgestao@gmail.com</a></p>
+    <p>As imagens deste site mostram as capas e páginas reais dos cadernos. Ilustrações dos cadernos: Twemoji, © Twitter, Inc. e colaboradores, licença CC-BY 4.0. Fontes Fredoka e Andika, licença SIL Open Font License 1.1.</p>
+    <p>Pagamento e entrega dos arquivos pela Eduzz. Este site usa o Pixel da Meta (cookies) para medir visitas e anúncios, como explica a política de privacidade. Dúvidas sobre compra, acesso ou reembolso: escreva para o e-mail acima ou fale com o atendimento da Eduzz.</p>
   </div>
 </footer>
 <div class="barra-cta"><b>Caderno · R$ 19,90</b><a class="btn cheio" href="#comprar">Quero</a></div>

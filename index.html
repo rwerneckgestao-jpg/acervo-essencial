@@ -19,9 +19,10 @@
 <meta property="og:image:height" content="1000">
 <meta name="twitter:card" content="summary_large_image">
 <script src="pixel.js"></script>
-<!-- SITE v05 · 25/10/2026 · links de compra em checkout.js -->
+<!-- SITE v06 · 25/10/2026 · links de compra em checkout.js -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Andika:wght@400;700&display=swap">
+<link rel="stylesheet" href="galeria.css">
 <style>
 :root {
   --petroleo: #1F5F7A; --coral: #E9694F; --mostarda: #F2B33D; --salvia: #7FB685;
@@ -226,6 +227,13 @@ footer a { color: #fff; }
 .legal h2 { font-size: 24px; margin-top: 34px; }
 .legal li { margin-bottom: 8px; }
 footer .links a { margin-right: 4px; }
+@media (min-width: 821px) { .hero .box { grid-template-columns: .85fr 1.35fr; } }
+@media (max-width: 820px) { .hero .box > img { order: -1; margin: -10px -10px 0; max-width: calc(100% + 20px); } .topo { flex-wrap: wrap; gap: 8px; } .menu { width: 100%; gap: 16px; } .menu a { font-size: 15px; } }
+.hero img { border-radius: 0; }
+.preco-hero { margin: 18px 0 0; font-size: 17px; }
+.preco-hero b { font-family: 'Fredoka', sans-serif; font-size: 30px; color: var(--petroleo); }
+.kitvis .pilhas { width: 100%; filter: drop-shadow(0 16px 26px rgba(0,0,0,.25)); }
+.fim { background: var(--coral-claro); text-align: center; }
 </style>
 </head>
 <body>
@@ -239,7 +247,7 @@ footer .links a { margin-right: 4px; }
   <path d="M24 52 C33 51 41 53 48 57 M24 64 C33 63 41 65 48 69 M24 76 C33 75 41 77 48 81" stroke="#FFF8EE" stroke-width="3.2" stroke-linecap="round" fill="none" opacity=".85"/>
   <circle cx="84" cy="66" r="9" fill="#FFF8EE" opacity=".9"/>
 </svg><b>Acervo Essencial</b></a>
-  <nav class="menu"><a href="index.html#cadernos">Os cadernos</a><a href="index.html#kit">Kit completo</a>
+  <nav class="menu"><a href="index.html#dentro">Os cadernos</a><a href="index.html#kit">Kit completo</a>
   <a href="index.html#amostra">Amostra grátis</a></nav>
 </header>
 
@@ -247,59 +255,86 @@ footer .links a { margin-right: 4px; }
   <div class="box">
     <div>
       <span class="chip">PDF para imprimir · crianças de 4 a 7 anos</span>
-      <h1>Cadernos que mostram, passo a passo, <em>como ajudar a criança a ler.</em></h1>
-      <p class="sub">4 cadernos de sons, letras, fala e atenção, com 173 páginas para imprimir. Cada página diz ao adulto o que pedir, em que ordem e como ajudar quando a criança erra. São 15 minutos por dia, com você do lado.</p>
+      <h1>93 atividades prontas para imprimir. <em>Olhe por dentro.</em></h1>
+      <p class="sub">Rimas, sílabas, leitura, fala e atenção em 4 cadernos coloridos, com guia para o adulto e um plano de 6 semanas. É só imprimir e sentar junto.</p>
+      <p class="preco-hero"><b>R$ 39,90</b> os 4 cadernos no Kit Completo · ou R$ 19,90 cada</p>
       <div class="btns">
-        <a class="btn cheio grande" href="#kit">Quero o Kit Completo · R$ 39,90</a>
-        <a class="btn vazio" href="#amostra">Baixar 16 páginas grátis</a>
+        <a class="btn cheio grande" href="#dentro">Ver as páginas por dentro</a>
+        <a class="btn vazio" href="#kit">Quero o Kit Completo</a>
       </div>
-      <div class="selos"><span>Guia do adulto baseado em pesquisa</span><span>Plano pronto de 6 semanas</span><span>Imprime quantas vezes quiser</span><span>Garantia de 7 dias</span></div>
     </div>
-    <img src="kit_4_cadernos_1600x1000.png" alt="Capas dos 4 cadernos do Kit Completo: Brincando com os Sons, Letras que Viram Palavras, Cobra e Abelha e Olhos Atentos" width="1600" height="1000" fetchpriority="high">
+    <img src="img/hero_paginas.jpg" alt="Páginas reais dos cadernos espalhadas: caça às estrelas, qual rima, cobra ou abelha, família do P, jogo do lince e bingo das rimas" width="1500" height="1150" fetchpriority="high">
   </div>
 </section>
 
-<section class="dor">
+<section class="numeros">
   <div class="box">
-    <h2>Alguma destas frases já passou pela sua cabeça?</h2>
-    <div class="grade">
-      <div class="q"><b>“Ele conhece as letras, mas não consegue ler.”</b> Falta um degrau antes: ouvir os sons dentro das palavras.</div>
-      <div class="q"><b>“Comprei apostila e ficou na gaveta.”</b> Folha solta, sem ordem, não vira rotina. Aqui tem começo, meio, fim e um plano para cada dia.</div>
-      <div class="q"><b>“Não sei como ajudar sem virar briga.”</b> O guia do adulto explica o que dizer quando a criança erra, sem pressão.</div>
-      <div class="q"><b>“Ela fala ‘zapo’ e ‘sebra’. É normal?”</b> Muitas vezes é. O caderno mostra o que treinar em casa e quando procurar um fonoaudiólogo.</div>
+    <div><b>4</b><span>cadernos</span></div>
+    <div><b>173</b><span>páginas coloridas</span></div>
+    <div><b>93</b><span>atividades e jogos</span></div>
+    <div><b>6</b><span>semanas de plano pronto</span></div>
+  </div>
+</section>
+
+<section id="dentro">
+  <div class="box">
+    <h2>Veja por dentro, página por página</h2>
+    <p class="dica">Toque numa página para ver em tamanho grande. Arraste para o lado para ver mais.</p>
+    
+    <div class="caderno rolo">
+      <div class="cab">
+        <div><span class="chip" style="background:var(--coral)">Consciência fonológica · 4 a 6 anos</span>
+          <h3>Brincando com os Sons</h3><p>Rimas, palmas, sílabas, primeiros sons e as primeiras letras: a base para aprender a ler. <b>40 páginas, 19 atividades.</b></p></div>
+        <div class="acoes"><div class="setas"><button type="button" data-rolar="-1" aria-label="Voltar">&lsaquo;</button><button type="button" data-rolar="1" aria-label="Avançar">&rsaquo;</button></div><span class="valor">R$ 19,90</span><a class="btn vazio" href="brincando-com-os-sons.html">Ver o caderno</a></div>
+      </div>
+      <div data-grupo><div class="galeria"><button type="button" data-zoom="img/pg/p1-15.jpg" data-legenda="Brincando com os Sons · Qual rima? (página 15)"><img src="img/pg/p1-15.jpg" alt="Brincando com os Sons: Qual rima?" loading="lazy" width="900" height="1273"><span>Qual rima?</span></button><button type="button" data-zoom="img/pg/p1-18.jpg" data-legenda="Brincando com os Sons · Palmas nas sílabas (página 18)"><img src="img/pg/p1-18.jpg" alt="Brincando com os Sons: Palmas nas sílabas" loading="lazy" width="900" height="1273"><span>Palmas nas sílabas</span></button><button type="button" data-zoom="img/pg/p1-22.jpg" data-legenda="Brincando com os Sons · Começa com BOLA (página 22)"><img src="img/pg/p1-22.jpg" alt="Brincando com os Sons: Começa com BOLA" loading="lazy" width="900" height="1273"><span>Começa com BOLA</span></button><button type="button" data-zoom="img/pg/p1-25.jpg" data-legenda="Brincando com os Sons · Cada um no seu balde (página 25)"><img src="img/pg/p1-25.jpg" alt="Brincando com os Sons: Cada um no seu balde" loading="lazy" width="900" height="1273"><span>Cada um no seu balde</span></button><button type="button" data-zoom="img/pg/p1-29.jpg" data-legenda="Brincando com os Sons · A letra das vogais (página 29)"><img src="img/pg/p1-29.jpg" alt="Brincando com os Sons: A letra das vogais" loading="lazy" width="900" height="1273"><span>A letra das vogais</span></button><button type="button" data-zoom="img/pg/p1-31.jpg" data-legenda="Brincando com os Sons · Bingo das rimas (página 31)"><img src="img/pg/p1-31.jpg" alt="Brincando com os Sons: Bingo das rimas" loading="lazy" width="900" height="1273"><span>Bingo das rimas</span></button><button type="button" data-zoom="img/pg/p1-33.jpg" data-legenda="Brincando com os Sons · Memória das rimas (página 33)"><img src="img/pg/p1-33.jpg" alt="Brincando com os Sons: Memória das rimas" loading="lazy" width="900" height="1273"><span>Memória das rimas</span></button><button type="button" data-zoom="img/pg/p1-03.jpg" data-legenda="Brincando com os Sons · O que tem no caderno (página 3)"><img src="img/pg/p1-03.jpg" alt="Brincando com os Sons: O que tem no caderno" loading="lazy" width="900" height="1273"><span>O que tem no caderno</span></button><button type="button" data-zoom="img/pg/p1-05.jpg" data-legenda="Brincando com os Sons · Guia: o que diz a pesquisa (página 5)"><img src="img/pg/p1-05.jpg" alt="Brincando com os Sons: Guia: o que diz a pesquisa" loading="lazy" width="900" height="1273"><span>Guia: o que diz a pesquisa</span></button><button type="button" data-zoom="img/pg/p1-11.jpg" data-legenda="Brincando com os Sons · Plano de 6 semanas (página 11)"><img src="img/pg/p1-11.jpg" alt="Brincando com os Sons: Plano de 6 semanas" loading="lazy" width="900" height="1273"><span>Plano de 6 semanas</span></button><button type="button" data-zoom="img/pg/p1-37.jpg" data-legenda="Brincando com os Sons · Certificado (página 37)"><img src="img/pg/p1-37.jpg" alt="Brincando com os Sons: Certificado" loading="lazy" width="900" height="1273"><span>Certificado</span></button></div></div>
     </div>
-    <p class="virada">A boa notícia: o que mais ajuda nessa fase não é um aplicativo caro. É um adulto que senta junto, com o material certo.</p>
+    <div class="caderno rolo">
+      <div class="cab">
+        <div><span class="chip" style="background:var(--petroleo)">Alfabetização · 5 a 7 anos</span>
+          <h3>Letras que Viram Palavras</h3><p>Vogais, 10 famílias de sílabas, palavras, frases e os primeiros textos. <b>48 páginas, 26 atividades.</b></p></div>
+        <div class="acoes"><div class="setas"><button type="button" data-rolar="-1" aria-label="Voltar">&lsaquo;</button><button type="button" data-rolar="1" aria-label="Avançar">&rsaquo;</button></div><span class="valor">R$ 19,90</span><a class="btn vazio" href="letras-que-viram-palavras.html">Ver o caderno</a></div>
+      </div>
+      <div data-grupo><div class="galeria"><button type="button" data-zoom="img/pg/p2-12.jpg" data-legenda="Letras que Viram Palavras · Trace as vogais (página 12)"><img src="img/pg/p2-12.jpg" alt="Letras que Viram Palavras: Trace as vogais" loading="lazy" width="900" height="1273"><span>Trace as vogais</span></button><button type="button" data-zoom="img/pg/p2-14.jpg" data-legenda="Letras que Viram Palavras · Caça às vogais (página 14)"><img src="img/pg/p2-14.jpg" alt="Letras que Viram Palavras: Caça às vogais" loading="lazy" width="900" height="1273"><span>Caça às vogais</span></button><button type="button" data-zoom="img/pg/p2-16.jpg" data-legenda="Letras que Viram Palavras · Família do P (página 16)"><img src="img/pg/p2-16.jpg" alt="Letras que Viram Palavras: Família do P" loading="lazy" width="900" height="1273"><span>Família do P</span></button><button type="button" data-zoom="img/pg/p2-26.jpg" data-legenda="Letras que Viram Palavras · Uma sílaba em cada quadrinho (página 26)"><img src="img/pg/p2-26.jpg" alt="Letras que Viram Palavras: Uma sílaba em cada quadrinho" loading="lazy" width="900" height="1273"><span>Uma sílaba em cada quadrinho</span></button><button type="button" data-zoom="img/pg/p2-28.jpg" data-legenda="Letras que Viram Palavras · Qual é a palavra certa? (página 28)"><img src="img/pg/p2-28.jpg" alt="Letras que Viram Palavras: Qual é a palavra certa?" loading="lazy" width="900" height="1273"><span>Qual é a palavra certa?</span></button><button type="button" data-zoom="img/pg/p2-33.jpg" data-legenda="Letras que Viram Palavras · Monte a frase (página 33)"><img src="img/pg/p2-33.jpg" alt="Letras que Viram Palavras: Monte a frase" loading="lazy" width="900" height="1273"><span>Monte a frase</span></button><button type="button" data-zoom="img/pg/p2-35.jpg" data-legenda="Letras que Viram Palavras · Texto: O sapo (página 35)"><img src="img/pg/p2-35.jpg" alt="Letras que Viram Palavras: Texto: O sapo" loading="lazy" width="900" height="1273"><span>Texto: O sapo</span></button><button type="button" data-zoom="img/pg/p2-38.jpg" data-legenda="Letras que Viram Palavras · Sílabas móveis (página 38)"><img src="img/pg/p2-38.jpg" alt="Letras que Viram Palavras: Sílabas móveis" loading="lazy" width="900" height="1273"><span>Sílabas móveis</span></button><button type="button" data-zoom="img/pg/p2-45.jpg" data-legenda="Letras que Viram Palavras · Alfabeto ilustrado (página 45)"><img src="img/pg/p2-45.jpg" alt="Letras que Viram Palavras: Alfabeto ilustrado" loading="lazy" width="900" height="1273"><span>Alfabeto ilustrado</span></button><button type="button" data-zoom="img/pg/p2-04.jpg" data-legenda="Letras que Viram Palavras · Guia: como a criança aprende a ler (página 4)"><img src="img/pg/p2-04.jpg" alt="Letras que Viram Palavras: Guia: como a criança aprende a ler" loading="lazy" width="900" height="1273"><span>Guia: como a criança aprende a ler</span></button><button type="button" data-zoom="img/pg/p2-11.jpg" data-legenda="Letras que Viram Palavras · Plano de 6 semanas (página 11)"><img src="img/pg/p2-11.jpg" alt="Letras que Viram Palavras: Plano de 6 semanas" loading="lazy" width="900" height="1273"><span>Plano de 6 semanas</span></button></div></div>
+    </div>
+    <div class="caderno rolo">
+      <div class="cab">
+        <div><span class="chip" style="background:var(--coral)">Fala · 4 a 7 anos</span>
+          <h3>Cobra e Abelha</h3><p>Ouvir e falar o som do S e o som do Z, do som sozinho até frases e histórias. <b>42 páginas, 24 atividades.</b></p></div>
+        <div class="acoes"><div class="setas"><button type="button" data-rolar="-1" aria-label="Voltar">&lsaquo;</button><button type="button" data-rolar="1" aria-label="Avançar">&rsaquo;</button></div><span class="valor">R$ 19,90</span><a class="btn vazio" href="cobra-e-abelha.html">Ver o caderno</a></div>
+      </div>
+      <div data-grupo><div class="galeria"><button type="button" data-zoom="img/pg/p3-12.jpg" data-legenda="Cobra e Abelha · A cobra e a abelha (página 12)"><img src="img/pg/p3-12.jpg" alt="Cobra e Abelha: A cobra e a abelha" loading="lazy" width="900" height="1273"><span>A cobra e a abelha</span></button><button type="button" data-zoom="img/pg/p3-13.jpg" data-legenda="Cobra e Abelha · Cobra ou abelha? (página 13)"><img src="img/pg/p3-13.jpg" alt="Cobra e Abelha: Cobra ou abelha?" loading="lazy" width="900" height="1273"><span>Cobra ou abelha?</span></button><button type="button" data-zoom="img/pg/p3-16.jpg" data-legenda="Cobra e Abelha · Som comprido (página 16)"><img src="img/pg/p3-16.jpg" alt="Cobra e Abelha: Som comprido" loading="lazy" width="900" height="1273"><span>Som comprido</span></button><button type="button" data-zoom="img/pg/p3-19.jpg" data-legenda="Cobra e Abelha · Escada da cobra e da abelha (página 19)"><img src="img/pg/p3-19.jpg" alt="Cobra e Abelha: Escada da cobra e da abelha" loading="lazy" width="900" height="1273"><span>Escada da cobra e da abelha</span></button><button type="button" data-zoom="img/pg/p3-23.jpg" data-legenda="Cobra e Abelha · Caminho do sapo (página 23)"><img src="img/pg/p3-23.jpg" alt="Cobra e Abelha: Caminho do sapo" loading="lazy" width="900" height="1273"><span>Caminho do sapo</span></button><button type="button" data-zoom="img/pg/p3-28.jpg" data-legenda="Cobra e Abelha · Doce ou doze? (página 28)"><img src="img/pg/p3-28.jpg" alt="Cobra e Abelha: Doce ou doze?" loading="lazy" width="900" height="1273"><span>Doce ou doze?</span></button><button type="button" data-zoom="img/pg/p3-32.jpg" data-legenda="Cobra e Abelha · Trava-línguas (página 32)"><img src="img/pg/p3-32.jpg" alt="Cobra e Abelha: Trava-línguas" loading="lazy" width="900" height="1273"><span>Trava-línguas</span></button><button type="button" data-zoom="img/pg/p3-33.jpg" data-legenda="Cobra e Abelha · História para ler junto (página 33)"><img src="img/pg/p3-33.jpg" alt="Cobra e Abelha: História para ler junto" loading="lazy" width="900" height="1273"><span>História para ler junto</span></button><button type="button" data-zoom="img/pg/p3-36.jpg" data-legenda="Cobra e Abelha · Jogo da memória (página 36)"><img src="img/pg/p3-36.jpg" alt="Cobra e Abelha: Jogo da memória" loading="lazy" width="900" height="1273"><span>Jogo da memória</span></button><button type="button" data-zoom="img/pg/p3-04.jpg" data-legenda="Cobra e Abelha · Guia: os sons S e Z (página 4)"><img src="img/pg/p3-04.jpg" alt="Cobra e Abelha: Guia: os sons S e Z" loading="lazy" width="900" height="1273"><span>Guia: os sons S e Z</span></button><button type="button" data-zoom="img/pg/p3-11.jpg" data-legenda="Cobra e Abelha · Plano de 6 semanas (página 11)"><img src="img/pg/p3-11.jpg" alt="Cobra e Abelha: Plano de 6 semanas" loading="lazy" width="900" height="1273"><span>Plano de 6 semanas</span></button></div></div>
+    </div>
+    <div class="caderno rolo">
+      <div class="cab">
+        <div><span class="chip" style="background:var(--petroleo)">Atenção visual · 4 a 7 anos</span>
+          <h3>Olhos Atentos</h3><p>Olhar, procurar, lembrar e copiar, com labirintos, caça-figuras e jogos. <b>43 páginas, 24 atividades.</b></p></div>
+        <div class="acoes"><div class="setas"><button type="button" data-rolar="-1" aria-label="Voltar">&lsaquo;</button><button type="button" data-rolar="1" aria-label="Avançar">&rsaquo;</button></div><span class="valor">R$ 19,90</span><a class="btn vazio" href="olhos-atentos.html">Ver o caderno</a></div>
+      </div>
+      <div data-grupo><div class="galeria"><button type="button" data-zoom="img/pg/p4-14.jpg" data-legenda="Olhos Atentos · Ache as diferenças (página 14)"><img src="img/pg/p4-14.jpg" alt="Olhos Atentos: Ache as diferenças" loading="lazy" width="900" height="1273"><span>Ache as diferenças</span></button><button type="button" data-zoom="img/pg/p4-16.jpg" data-legenda="Olhos Atentos · Caça às estrelas (página 16)"><img src="img/pg/p4-16.jpg" alt="Olhos Atentos: Caça às estrelas" loading="lazy" width="900" height="1273"><span>Caça às estrelas</span></button><button type="button" data-zoom="img/pg/p4-17.jpg" data-legenda="Olhos Atentos · Caça aos peixes (página 17)"><img src="img/pg/p4-17.jpg" alt="Olhos Atentos: Caça aos peixes" loading="lazy" width="900" height="1273"><span>Caça aos peixes</span></button><button type="button" data-zoom="img/pg/p4-21.jpg" data-legenda="Olhos Atentos · O que sumiu? (página 21)"><img src="img/pg/p4-21.jpg" alt="Olhos Atentos: O que sumiu?" loading="lazy" width="900" height="1273"><span>O que sumiu?</span></button><button type="button" data-zoom="img/pg/p4-24.jpg" data-legenda="Olhos Atentos · Continue o padrão (página 24)"><img src="img/pg/p4-24.jpg" alt="Olhos Atentos: Continue o padrão" loading="lazy" width="900" height="1273"><span>Continue o padrão</span></button><button type="button" data-zoom="img/pg/p4-28.jpg" data-legenda="Olhos Atentos · Labirinto da abelha (página 28)"><img src="img/pg/p4-28.jpg" alt="Olhos Atentos: Labirinto da abelha" loading="lazy" width="900" height="1273"><span>Labirinto da abelha</span></button><button type="button" data-zoom="img/pg/p4-31.jpg" data-legenda="Olhos Atentos · Copie o desenho (página 31)"><img src="img/pg/p4-31.jpg" alt="Olhos Atentos: Copie o desenho" loading="lazy" width="900" height="1273"><span>Copie o desenho</span></button><button type="button" data-zoom="img/pg/p4-33.jpg" data-legenda="Olhos Atentos · Pise só no sapo (página 33)"><img src="img/pg/p4-33.jpg" alt="Olhos Atentos: Pise só no sapo" loading="lazy" width="900" height="1273"><span>Pise só no sapo</span></button><button type="button" data-zoom="img/pg/p4-36.jpg" data-legenda="Olhos Atentos · Jogo do lince (página 36)"><img src="img/pg/p4-36.jpg" alt="Olhos Atentos: Jogo do lince" loading="lazy" width="900" height="1273"><span>Jogo do lince</span></button><button type="button" data-zoom="img/pg/p4-05.jpg" data-legenda="Olhos Atentos · Guia: o que diz a pesquisa (página 5)"><img src="img/pg/p4-05.jpg" alt="Olhos Atentos: Guia: o que diz a pesquisa" loading="lazy" width="900" height="1273"><span>Guia: o que diz a pesquisa</span></button><button type="button" data-zoom="img/pg/p4-11.jpg" data-legenda="Olhos Atentos · Plano de 6 semanas (página 11)"><img src="img/pg/p4-11.jpg" alt="Olhos Atentos: Plano de 6 semanas" loading="lazy" width="900" height="1273"><span>Plano de 6 semanas</span></button></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="creme">
+  <div class="box">
+    <h2>De perto: figuras grandes, cores e instruções claras</h2>
+    <div class="zooms" data-grupo>
+      <button type="button" data-zoom="img/zoom_silabas.jpg" data-legenda="Letras que Viram Palavras · Família do P"><img src="img/zoom_silabas.jpg" alt="Detalhe da atividade Família do P: sílabas PA, PE, PI, PO, PU para ler e traçar" loading="lazy" width="1200" height="628"><span><b>Família do P</b>Ler, traçar e completar as sílabas, com figuras para cada palavra.</span></button>
+      <button type="button" data-zoom="img/zoom_rimas.jpg" data-legenda="Brincando com os Sons · Qual rima?"><img src="img/zoom_rimas.jpg" alt="Detalhe da atividade Qual rima?: figuras para achar a que rima" loading="lazy"><span><b>Qual rima?</b>A criança ouve o nome da figura e circula a que rima com ela.</span></button>
+      <button type="button" data-zoom="img/zoom_cobra.jpg" data-legenda="Cobra e Abelha · Cobra ou abelha?"><img src="img/zoom_cobra.jpg" alt="Detalhe da atividade Cobra ou abelha?: figuras com o som do S ou do Z" loading="lazy"><span><b>Cobra ou abelha?</b>O adulto fala, a criança escuta e marca se ouviu “ssss” ou “zzzz”.</span></button>
+      <button type="button" data-zoom="img/zoom_lince.jpg" data-legenda="Olhos Atentos · Jogo do lince"><img src="img/zoom_lince.jpg" alt="Detalhe do Jogo do lince: tabuleiro com figuras coloridas" loading="lazy"><span><b>Jogo do lince</b>Tabuleiro e cartas para recortar: quem acha a figura primeiro fica com a carta.</span></button>
+    </div>
   </div>
 </section>
 
 <section>
-  <div class="box foto-txt">
-    <img src="v3_pag5.png" alt="Página do guia do adulto: o que diz a pesquisa, com os estudos citados" loading="lazy">
-    <div>
-      <span class="chip" style="background:var(--petroleo)">O que a pesquisa diz</span>
-      <h2 style="margin-top:14px">A sua participação faz diferença de verdade</h2>
-      <p>Uma revisão de 16 estudos com famílias comparou formas de os pais ajudarem os filhos a ler. Só ler histórias em voz alta ajudou pouco. O que mais fez diferença foi o adulto <b>ensinar habilidades específicas</b>: sons, letras e palavras, com uma atividade guiada.</p>
-      <div class="dado"><div class="num">6×</div><p>maior foi o efeito quando os pais ensinaram habilidades específicas de leitura, em comparação com apenas ler para a criança.</p></div>
-      <p>É exatamente isso que os cadernos fazem: cada página diz ao adulto o que pedir, como mostrar e como comemorar o acerto.</p>
-      <p class="fonte">Fonte: Sénéchal, M. e Young, L. (2008). Review of Educational Research, 78(4), 880-907. Efeito médio de 1,15 para ensinar habilidades, contra 0,18 para ler para a criança.</p>
-      <div class="btns"><a class="btn cheio" href="#kit">Quero ensinar com o kit</a></div>
-    </div>
-  </div>
-</section>
-
-<section class="profs">
   <div class="box">
-    <h2>Em casa, na escola e no consultório</h2>
-    <p style="max-width:760px">O mesmo PDF serve para os três. A professora pode usar em sala e mandar a folha para casa. A fonoaudióloga ou a psicopedagoga pode passar como tarefa entre as sessões. Em casa, basta a mesa da cozinha.</p>
-    <div class="grade" style="margin-top:22px">
-      <figure><img src="v3_pag11.png" alt="Página do plano de 6 semanas, com uma atividade para cada dia" loading="lazy"><figcaption>Plano de 6 semanas: uma atividade por dia, de segunda a sexta.</figcaption></figure>
-      <figure><img src="p3_pag13.jpg" alt="Atividade do caderno Cobra e Abelha: circular a cobra ou a abelha" loading="lazy"><figcaption>Atividade do Cobra e Abelha: o adulto fala, a criança escuta e circula.</figcaption></figure>
+    <h2>Todas as 173 páginas do kit, sem tirar nenhuma</h2>
+    <p>Isto é tudo o que você recebe. Toque num caderno para ampliar.</p>
+    <div class="parede" data-grupo>
+      <button type="button" data-zoom="img/todas_p1.jpg" data-legenda="Brincando com os Sons: as 40 páginas"><img src="img/todas_p1.jpg" alt="Miniaturas de todas as 40 páginas do caderno Brincando com os Sons" loading="lazy"><span>Brincando com os Sons <small>· 40 páginas</small></span></button><button type="button" data-zoom="img/todas_p2.jpg" data-legenda="Letras que Viram Palavras: as 48 páginas"><img src="img/todas_p2.jpg" alt="Miniaturas de todas as 48 páginas do caderno Letras que Viram Palavras" loading="lazy"><span>Letras que Viram Palavras <small>· 48 páginas</small></span></button><button type="button" data-zoom="img/todas_p3.jpg" data-legenda="Cobra e Abelha: as 42 páginas"><img src="img/todas_p3.jpg" alt="Miniaturas de todas as 42 páginas do caderno Cobra e Abelha" loading="lazy"><span>Cobra e Abelha <small>· 42 páginas</small></span></button><button type="button" data-zoom="img/todas_p4.jpg" data-legenda="Olhos Atentos: as 43 páginas"><img src="img/todas_p4.jpg" alt="Miniaturas de todas as 43 páginas do caderno Olhos Atentos" loading="lazy"><span>Olhos Atentos <small>· 43 páginas</small></span></button>
     </div>
-    <ul class="lista" style="margin-top:22px;max-width:760px">
-      <li>Pode imprimir quantas vezes precisar para os seus alunos ou pacientes</li>
-      <li>Avaliação de início e de fim para mostrar o progresso à família</li>
-      <li>Linguagem simples para o adulto que leva a tarefa para casa</li>
-    </ul>
   </div>
 </section>
 
@@ -308,7 +343,7 @@ footer .links a { margin-right: 4px; }
     <div class="kit">
       <div class="kitvis">
         <p class="kt">4 cadernos.<br><em>173 páginas.</em><br>1 plano pronto.</p>
-        <div class="kg"><img src="kit_capa1.jpg" alt="Capa do caderno Brincando com os Sons" loading="lazy"><img src="kit_capa2.jpg" alt="Capa do caderno Letras que Viram Palavras" loading="lazy"><img src="kit_capa3.jpg" alt="Capa do caderno Cobra e Abelha" loading="lazy"><img src="kit_capa4.jpg" alt="Capa do caderno Olhos Atentos" loading="lazy"></div>
+        <img class="pilhas" src="img/kit_pilhas.png" alt="Os 4 cadernos empilhados: 40, 48, 42 e 43 páginas" loading="lazy" width="1352" height="522">
         <ul class="kl">
           <li>4 cadernos para imprimir: 173 páginas de atividades</li>
           <li>Guia do adulto em cada caderno, baseado em pesquisa</li>
@@ -335,67 +370,15 @@ footer .links a { margin-right: 4px; }
   </div>
 </section>
 
-<section id="cadernos" class="creme">
-  <div class="box">
-    <h2>Os cadernos, um por um</h2>
-    <p>Prefere começar por um só? Cada caderno é vendido separado, por R$ 19,90.</p>
-    <div class="cards">
-      <div class="card"><img src="paginas_P01.png" alt="Páginas do caderno Brincando com os Sons" loading="lazy">
-        <div class="in"><span class="chip" style="align-self:flex-start;background:var(--coral)">Consciência fonológica · 4 a 6 anos</span>
-        <h3 style="font-size:26px;margin-top:8px">Brincando com os Sons</h3>
-        <p>Rimas, palmas, sílabas, primeiros sons e as primeiras letras. A base para aprender a ler.</p>
-        <ul class="lista"><li>40 páginas, 6 etapas e 19 atividades</li><li>Guia do adulto e plano de 6 semanas</li><li>Bingo e memória das rimas</li></ul>
-        <div class="valor">R$ 19,90</div>
-        <div class="btns"><a class="btn cheio" href="brincando-com-os-sons.html">Ver o caderno</a></div></div></div>
-      <div class="card"><img src="paginas_P02_v02.png" alt="Páginas do caderno Letras que Viram Palavras" loading="lazy">
-        <div class="in"><span class="chip" style="align-self:flex-start;background:var(--petroleo)">Alfabetização · 5 a 7 anos</span>
-        <h3 style="font-size:26px;margin-top:8px">Letras que Viram Palavras</h3>
-        <p>Vogais, 10 famílias de sílabas, palavras, frases e os primeiros textos.</p>
-        <ul class="lista"><li>48 páginas, 6 etapas e 26 atividades</li><li>Guia do adulto e plano de 6 semanas</li><li>Sílabas móveis, bingo e alfabeto ilustrado</li></ul>
-        <div class="valor">R$ 19,90</div>
-        <div class="btns"><a class="btn cheio" href="letras-que-viram-palavras.html">Ver o caderno</a></div></div></div>
-      <div class="card"><img src="paginas_P03.png" alt="Páginas do caderno Cobra e Abelha" loading="lazy">
-        <div class="in"><span class="chip" style="align-self:flex-start;background:var(--coral)">Fala · 4 a 7 anos</span>
-        <h3 style="font-size:26px;margin-top:8px">Cobra e Abelha</h3>
-        <p>Ouvir e falar o som do S e o som do Z, do som sozinho até frases e histórias.</p>
-        <ul class="lista"><li>42 páginas, 6 etapas e 24 atividades</li><li>Guia do adulto e plano de 6 semanas</li><li>Trava-línguas, história e jogo da memória</li></ul>
-        <div class="valor">R$ 19,90</div>
-        <div class="btns"><a class="btn cheio" href="cobra-e-abelha.html">Ver o caderno</a></div></div></div>
-      <div class="card"><img src="paginas_P04.png" alt="Páginas do caderno Olhos Atentos" loading="lazy">
-        <div class="in"><span class="chip" style="align-self:flex-start;background:var(--petroleo)">Atenção visual · 4 a 7 anos</span>
-        <h3 style="font-size:26px;margin-top:8px">Olhos Atentos</h3>
-        <p>Olhar, procurar, lembrar e copiar, com labirintos, caça-figuras e jogos.</p>
-        <ul class="lista"><li>43 páginas, 6 etapas e 24 atividades</li><li>Guia do adulto e plano de 6 semanas</li><li>Jogo do lince e jogo do contrário</li></ul>
-        <div class="valor">R$ 19,90</div>
-        <div class="btns"><a class="btn cheio" href="olhos-atentos.html">Ver o caderno</a></div></div></div>
-    </div>
-  </div>
-</section>
-
-<section class="azul">
-  <div class="box">
-    <h2>Qual caderno escolher?</h2>
-    <div class="escolha q4">
-      <div style="--c:var(--coral)"><h3>A criança ainda não lê</h3><p>Ela está aprendendo a ouvir rimas e a separar as palavras em pedaços? Comece pelo
-      <a href="brincando-com-os-sons.html">Brincando com os Sons</a>.</p></div>
-      <div style="--c:var(--petroleo)"><h3>Ela já brinca com os sons</h3><p>Já acha rimas e bate palmas nas sílabas, e agora quer juntar as letras?
-      Siga para o <a href="letras-que-viram-palavras.html">Letras que Viram Palavras</a>.</p></div>
-      <div style="--c:var(--mostarda)"><h3>Ela troca o S e o Z</h3><p>Fala “zapo” ou “sebra”? O <a href="cobra-e-abelha.html">Cobra e Abelha</a>
-      treina primeiro a escuta e depois a fala desses dois sons.</p></div>
-      <div style="--c:var(--salvia)"><h3>Ela se distrai com os detalhes</h3><p>Para treinar olhar, procurar, lembrar e copiar, use o
-      <a href="olhos-atentos.html">Olhos Atentos</a>. Combina com qualquer um dos outros.</p></div>
-    </div>
-    <p class="nota">Na dúvida, o Kit Completo traz os quatro: você usa cada um na hora certa.</p>
-  </div>
-</section>
-
-<section>
-  <div class="box">
-    <h2>Por que estes cadernos são diferentes</h2>
-    <div class="tres">
-      <div class="passo"><h3>Guia para o adulto</h3><p>Seis páginas em cada caderno explicam o que fazer, por que fazer e como ajudar quando a criança erra, com base em pesquisa.</p></div>
-      <div class="passo"><h3>Sequência com começo e fim</h3><p>Nada de folhinhas soltas: as etapas seguem uma ordem e o plano de 6 semanas diz o que fazer em cada dia.</p></div>
-      <div class="passo"><h3>Progresso que dá para ver</h3><p>Uma avaliação no começo e outra no fim, com as mesmas perguntas, mostram o que mudou.</p></div>
+<section class="creme">
+  <div class="box foto-txt">
+    <img src="img/pg/p1-05.jpg" alt="Página do guia do adulto: o que diz a pesquisa" loading="lazy">
+    <div>
+      <span class="chip" style="background:var(--petroleo)">Guia do adulto em cada caderno</span>
+      <h2 style="margin-top:14px">Você não precisa ser professor</h2>
+      <p>Cada caderno começa com 6 páginas para o adulto: o que fazer, em que ordem, como reagir quando a criança erra e quando procurar um profissional.</p>
+      <div class="dado"><div class="num">6×</div><p>maior foi o efeito quando os pais ensinaram habilidades de leitura com atividades guiadas, em comparação com só ler para a criança.</p></div>
+      <p class="fonte">Fonte: Sénéchal, M. e Young, L. (2008). Review of Educational Research, 78(4), 880-907. Efeito médio de 1,15 contra 0,18.</p>
     </div>
   </div>
 </section>
@@ -412,14 +395,6 @@ footer .links a { margin-right: 4px; }
   </div>
 </section>
 
-<section class="fecho">
-  <div class="box">
-    <h2>Daqui a 6 semanas, você vai lembrar deste dia</h2>
-    <p>O dia em que decidiu sentar junto. 173 páginas, um plano pronto e 15 minutos por dia. Por menos do que uma pizza.</p>
-    <div class="btns" style="justify-content:center"><a class="btn cheio grande" data-checkout="kit" href="#amostra">Quero o Kit Completo · R$ 39,90</a></div>
-    <p class="nota" style="color:#DDE6EA">Garantia de 7 dias · Pagamento pela Eduzz · Acesso aos PDFs no seu e-mail</p>
-  </div>
-</section>
 <section class="azul">
   <div class="box">
     <h2>Perguntas frequentes</h2>
@@ -427,6 +402,15 @@ footer .links a { margin-right: 4px; }
     <details><summary>O que vem no Kit Completo?</summary><p>Os quatro cadernos inteiros: Brincando com os Sons, Letras que Viram Palavras, Cobra e Abelha e Olhos Atentos, somando 173 páginas. Separados, custam R$ 79,60; no kit, R$ 39,90.</p></details>
     <details><summary>Como recebo?</summary><p>A compra é feita pela Eduzz. Depois da confirmação do pagamento, você recebe o acesso aos PDFs no e-mail cadastrado.</p></details>
     <details><summary>Substituem a escola ou um profissional?</summary><p>Não. São materiais de apoio. Eles não fazem diagnóstico e não substituem professor, psicopedagogo, fonoaudiólogo ou outro profissional.</p></details>
+    <details><summary>Posso usar com a minha turma ou com meus pacientes?</summary><p>Sim. Você pode imprimir quantas vezes quiser para usar com seus filhos, alunos ou pacientes. Só não pode revender nem compartilhar o arquivo. Os detalhes estão nos <a href="termos-de-uso.html">termos</a>.</p></details>
+  </div>
+</section>
+
+<section class="fim">
+  <div class="box">
+    <h2>173 páginas prontas para a próxima tarde com o seu filho</h2>
+    <div class="btns" style="justify-content:center"><a class="btn cheio grande" data-checkout="kit" href="#amostra">Quero o Kit Completo · R$ 39,90</a></div>
+    <p class="nota">Garantia de 7 dias · Pagamento pela Eduzz · PDFs no seu e-mail</p>
   </div>
 </section>
 <footer>
@@ -439,5 +423,6 @@ footer .links a { margin-right: 4px; }
 </footer>
 <div class="barra-cta"><b>Kit Completo · R$ 39,90</b><a class="btn cheio" href="#kit">Quero</a></div>
 <script src="checkout.js"></script>
+<script src="galeria.js"></script>
 </body>
 </html>

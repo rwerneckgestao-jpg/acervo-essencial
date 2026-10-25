@@ -22,6 +22,7 @@
 <!-- SITE v04 · 21/10/2026 · links de compra em checkout.js -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Andika:wght@400;700&display=swap">
+<link rel="stylesheet" href="galeria.css">
 <style>
 :root {
   --petroleo: #1F5F7A; --coral: #E9694F; --mostarda: #F2B33D; --salvia: #7FB685;
@@ -206,6 +207,8 @@ footer a { color: #fff; }
 .legal h2 { font-size: 24px; margin-top: 34px; }
 .legal li { margin-bottom: 8px; }
 footer .links a { margin-right: 4px; }
+@media (min-width: 821px) { .hero .box { grid-template-columns: .9fr 1.3fr; } }
+@media (max-width: 820px) { .hero .box > img { order: -1; } .topo { flex-wrap: wrap; gap: 8px; } .menu { width: 100%; gap: 16px; } .menu a { font-size: 15px; } }
 </style>
 </head>
 <body>
@@ -219,7 +222,7 @@ footer .links a { margin-right: 4px; }
   <path d="M24 52 C33 51 41 53 48 57 M24 64 C33 63 41 65 48 69 M24 76 C33 75 41 77 48 81" stroke="#FFF8EE" stroke-width="3.2" stroke-linecap="round" fill="none" opacity=".85"/>
   <circle cx="84" cy="66" r="9" fill="#FFF8EE" opacity=".9"/>
 </svg><b>Acervo Essencial</b></a>
-  <nav class="menu"><a href="index.html#cadernos">Os cadernos</a><a href="index.html#kit">Kit completo</a>
+  <nav class="menu"><a href="index.html#dentro">Os cadernos</a><a href="index.html#kit">Kit completo</a>
   <a href="index.html#amostra">Amostra grátis</a></nav>
 </header>
 <section class="hero">
@@ -234,9 +237,24 @@ footer .links a { margin-right: 4px; }
       </div>
       <p class="nota">PDF de 40 páginas em A4. Imprime em casa quantas vezes quiser.</p>
     </div>
-    <img src="paginas_P01.png" alt="Capa e páginas do caderno Brincando com os Sons" width="1080" height="880">
+    <img src="img/mesa_p1.jpg" alt="Páginas reais do caderno Brincando com os Sons sobre a mesa" width="1400" height="1050" fetchpriority="high">
   </div>
 </section>
+
+<section id="dentro">
+  <div class="box rolo">
+    <div class="cab"><div><h2 style="margin:0">Veja por dentro: 25 páginas do caderno</h2>
+      <p class="dica">Páginas reais, do jeito que saem na impressora. Toque para ampliar e arraste para o lado.</p></div><div class="setas"><button type="button" data-rolar="-1" aria-label="Voltar">&lsaquo;</button><button type="button" data-rolar="1" aria-label="Avançar">&rsaquo;</button></div></div>
+    <div data-grupo><div class="galeria"><button type="button" data-zoom="img/pg/p1-12.jpg" data-legenda="Brincando com os Sons · página 12 de 40"><img src="img/pg/p1-12.jpg" alt="Brincando com os Sons: página 12" loading="lazy" width="900" height="1273"><span>Página 12</span></button><button type="button" data-zoom="img/pg/p1-13.jpg" data-legenda="Brincando com os Sons · página 13 de 40"><img src="img/pg/p1-13.jpg" alt="Brincando com os Sons: página 13" loading="lazy" width="900" height="1273"><span>Página 13</span></button><button type="button" data-zoom="img/pg/p1-14.jpg" data-legenda="Brincando com os Sons · página 14 de 40"><img src="img/pg/p1-14.jpg" alt="Brincando com os Sons: página 14" loading="lazy" width="900" height="1273"><span>Página 14</span></button><button type="button" data-zoom="img/pg/p1-15.jpg" data-legenda="Brincando com os Sons · página 15 de 40"><img src="img/pg/p1-15.jpg" alt="Brincando com os Sons: Qual rima?" loading="lazy" width="900" height="1273"><span>Qual rima?</span></button><button type="button" data-zoom="img/pg/p1-16.jpg" data-legenda="Brincando com os Sons · página 16 de 40"><img src="img/pg/p1-16.jpg" alt="Brincando com os Sons: página 16" loading="lazy" width="900" height="1273"><span>Página 16</span></button><button type="button" data-zoom="img/pg/p1-17.jpg" data-legenda="Brincando com os Sons · página 17 de 40"><img src="img/pg/p1-17.jpg" alt="Brincando com os Sons: página 17" loading="lazy" width="900" height="1273"><span>Página 17</span></button><button type="button" data-zoom="img/pg/p1-18.jpg" data-legenda="Brincando com os Sons · página 18 de 40"><img src="img/pg/p1-18.jpg" alt="Brincando com os Sons: Palmas nas sílabas" loading="lazy" width="900" height="1273"><span>Palmas nas sílabas</span></button><button type="button" data-zoom="img/pg/p1-19.jpg" data-legenda="Brincando com os Sons · página 19 de 40"><img src="img/pg/p1-19.jpg" alt="Brincando com os Sons: página 19" loading="lazy" width="900" height="1273"><span>Página 19</span></button><button type="button" data-zoom="img/pg/p1-20.jpg" data-legenda="Brincando com os Sons · página 20 de 40"><img src="img/pg/p1-20.jpg" alt="Brincando com os Sons: página 20" loading="lazy" width="900" height="1273"><span>Página 20</span></button><button type="button" data-zoom="img/pg/p1-21.jpg" data-legenda="Brincando com os Sons · página 21 de 40"><img src="img/pg/p1-21.jpg" alt="Brincando com os Sons: página 21" loading="lazy" width="900" height="1273"><span>Página 21</span></button><button type="button" data-zoom="img/pg/p1-22.jpg" data-legenda="Brincando com os Sons · página 22 de 40"><img src="img/pg/p1-22.jpg" alt="Brincando com os Sons: Começa com BOLA" loading="lazy" width="900" height="1273"><span>Começa com BOLA</span></button><button type="button" data-zoom="img/pg/p1-23.jpg" data-legenda="Brincando com os Sons · página 23 de 40"><img src="img/pg/p1-23.jpg" alt="Brincando com os Sons: página 23" loading="lazy" width="900" height="1273"><span>Página 23</span></button><button type="button" data-zoom="img/pg/p1-24.jpg" data-legenda="Brincando com os Sons · página 24 de 40"><img src="img/pg/p1-24.jpg" alt="Brincando com os Sons: página 24" loading="lazy" width="900" height="1273"><span>Página 24</span></button><button type="button" data-zoom="img/pg/p1-25.jpg" data-legenda="Brincando com os Sons · página 25 de 40"><img src="img/pg/p1-25.jpg" alt="Brincando com os Sons: Cada um no seu balde" loading="lazy" width="900" height="1273"><span>Cada um no seu balde</span></button><button type="button" data-zoom="img/pg/p1-26.jpg" data-legenda="Brincando com os Sons · página 26 de 40"><img src="img/pg/p1-26.jpg" alt="Brincando com os Sons: página 26" loading="lazy" width="900" height="1273"><span>Página 26</span></button><button type="button" data-zoom="img/pg/p1-27.jpg" data-legenda="Brincando com os Sons · página 27 de 40"><img src="img/pg/p1-27.jpg" alt="Brincando com os Sons: página 27" loading="lazy" width="900" height="1273"><span>Página 27</span></button><button type="button" data-zoom="img/pg/p1-28.jpg" data-legenda="Brincando com os Sons · página 28 de 40"><img src="img/pg/p1-28.jpg" alt="Brincando com os Sons: página 28" loading="lazy" width="900" height="1273"><span>Página 28</span></button><button type="button" data-zoom="img/pg/p1-29.jpg" data-legenda="Brincando com os Sons · página 29 de 40"><img src="img/pg/p1-29.jpg" alt="Brincando com os Sons: A letra das vogais" loading="lazy" width="900" height="1273"><span>A letra das vogais</span></button><button type="button" data-zoom="img/pg/p1-30.jpg" data-legenda="Brincando com os Sons · página 30 de 40"><img src="img/pg/p1-30.jpg" alt="Brincando com os Sons: página 30" loading="lazy" width="900" height="1273"><span>Página 30</span></button><button type="button" data-zoom="img/pg/p1-31.jpg" data-legenda="Brincando com os Sons · página 31 de 40"><img src="img/pg/p1-31.jpg" alt="Brincando com os Sons: Bingo das rimas" loading="lazy" width="900" height="1273"><span>Bingo das rimas</span></button><button type="button" data-zoom="img/pg/p1-32.jpg" data-legenda="Brincando com os Sons · página 32 de 40"><img src="img/pg/p1-32.jpg" alt="Brincando com os Sons: página 32" loading="lazy" width="900" height="1273"><span>Página 32</span></button><button type="button" data-zoom="img/pg/p1-33.jpg" data-legenda="Brincando com os Sons · página 33 de 40"><img src="img/pg/p1-33.jpg" alt="Brincando com os Sons: Memória das rimas" loading="lazy" width="900" height="1273"><span>Memória das rimas</span></button><button type="button" data-zoom="img/pg/p1-34.jpg" data-legenda="Brincando com os Sons · página 34 de 40"><img src="img/pg/p1-34.jpg" alt="Brincando com os Sons: página 34" loading="lazy" width="900" height="1273"><span>Página 34</span></button><button type="button" data-zoom="img/pg/p1-11.jpg" data-legenda="Brincando com os Sons · página 11 de 40"><img src="img/pg/p1-11.jpg" alt="Brincando com os Sons: Plano de 6 semanas" loading="lazy" width="900" height="1273"><span>Plano de 6 semanas</span></button><button type="button" data-zoom="img/pg/p1-05.jpg" data-legenda="Brincando com os Sons · página 5 de 40"><img src="img/pg/p1-05.jpg" alt="Brincando com os Sons: Guia: o que diz a pesquisa" loading="lazy" width="900" height="1273"><span>Guia: o que diz a pesquisa</span></button></div></div>
+  </div>
+</section>
+<section class="creme">
+  <div class="box">
+    <h2>As 40 páginas, todas de uma vez</h2>
+    <div class="parede" data-grupo style="grid-template-columns:1fr;max-width:820px"><button type="button" data-zoom="img/todas_p1.jpg" data-legenda="Brincando com os Sons: as 40 páginas"><img src="img/todas_p1.jpg" alt="Miniaturas de todas as 40 páginas do caderno Brincando com os Sons" loading="lazy"><span>Brincando com os Sons <small>· 40 páginas, 19 atividades · toque para ampliar</small></span></button></div>
+  </div>
+</section>
+
 
 <section class="dor">
   <div class="box foto-txt">
@@ -305,21 +323,6 @@ footer .links a { margin-right: 4px; }
       <div class="etapa" style="--c:var(--salvia)"><span class="n">4</span><div><b>Primeiro som</b><p>Descobrir com que som a palavra começa.</p></div></div>
       <div class="etapa" style="--c:var(--petroleo)"><span class="n">5</span><div><b>Brincando com os sons</b><p>Vogais, juntar sons e trocar sons.</p></div></div>
       <div class="etapa" style="--c:var(--coral)"><span class="n">6</span><div><b>Som e letra</b><p>Ligar o som que a criança já ouve à letra.</p></div></div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="box">
-    <h2>Veja por dentro</h2>
-    <p>Estas são páginas reais do caderno, do jeito que saem na impressora.</p>
-    <div class="paginas p6">
-      <figure><img src="v3_pag5.png" alt="Guia do adulto: o que diz a pesquisa" loading="lazy"><figcaption>Guia: o que diz a pesquisa</figcaption></figure>
-      <figure><img src="v3_pag11.png" alt="Plano de 6 semanas" loading="lazy"><figcaption>Plano de 6 semanas</figcaption></figure>
-      <figure><img src="v3_pag19.png" alt="Atividade Junte os pedaços" loading="lazy"><figcaption>Junte os pedaços</figcaption></figure>
-      <figure><img src="v3_pag29.png" alt="Atividade A letra das vogais" loading="lazy"><figcaption>A letra das vogais</figcaption></figure>
-      <figure><img src="v3_pag31.png" alt="Bingo das rimas" loading="lazy"><figcaption>Bingo das rimas</figcaption></figure>
-      <figure><img src="v3_pag39.png" alt="10 brincadeiras sem papel" loading="lazy"><figcaption>10 brincadeiras sem papel</figcaption></figure>
     </div>
   </div>
 </section>
@@ -437,5 +440,6 @@ footer .links a { margin-right: 4px; }
 </footer>
 <div class="barra-cta"><b>Caderno · R$ 19,90</b><a class="btn cheio" href="#comprar">Quero</a></div>
 <script src="checkout.js"></script>
+<script src="galeria.js"></script>
 </body>
 </html>

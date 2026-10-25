@@ -13,3 +13,7 @@ Site de vendas dos cadernos para imprimir (GitHub Pages).
 Sem gradiente roxo, sem botões pílula, sem avaliações, métricas ou contadores falsos, título do topo concreto (diz o que é o produto),
 sem ícones de emoji (ícones em SVG), sem travessões, sem animação exagerada ou de cursor, sem fotos geradas por IA (usar páginas reais
 dos cadernos ou fotos reais), sem selo "feito com IA", favicon, política de privacidade e termos no rodapé. Domínio próprio: pendente.
+
+## v06 (25/10/2026): o produto por dentro
+- `img/`: páginas reais renderizadas dos PDFs finais (`img/pg/pC-NN.jpg`), mesa de páginas do topo (`hero_paginas.jpg`, `mesa_pC.jpg`), pilhas do kit, detalhes ampliados e a parede com todas as páginas de cada caderno (`todas_pC.jpg`).
+- `galeria.css` e `galeria.js`: galerias com rolagem lateral e visualização ampliada (sem animação).

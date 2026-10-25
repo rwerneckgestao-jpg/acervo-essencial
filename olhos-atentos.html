@@ -22,6 +22,7 @@
 <!-- SITE v04 · 21/10/2026 · links de compra em checkout.js -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Andika:wght@400;700&display=swap">
+<link rel="stylesheet" href="galeria.css">
 <style>
 :root {
   --petroleo: #1F5F7A; --coral: #E9694F; --mostarda: #F2B33D; --salvia: #7FB685;
@@ -206,6 +207,8 @@ footer a { color: #fff; }
 .legal h2 { font-size: 24px; margin-top: 34px; }
 .legal li { margin-bottom: 8px; }
 footer .links a { margin-right: 4px; }
+@media (min-width: 821px) { .hero .box { grid-template-columns: .9fr 1.3fr; } }
+@media (max-width: 820px) { .hero .box > img { order: -1; } .topo { flex-wrap: wrap; gap: 8px; } .menu { width: 100%; gap: 16px; } .menu a { font-size: 15px; } }
 </style>
 </head>
 <body>
@@ -219,7 +222,7 @@ footer .links a { margin-right: 4px; }
   <path d="M24 52 C33 51 41 53 48 57 M24 64 C33 63 41 65 48 69 M24 76 C33 75 41 77 48 81" stroke="#FFF8EE" stroke-width="3.2" stroke-linecap="round" fill="none" opacity=".85"/>
   <circle cx="84" cy="66" r="9" fill="#FFF8EE" opacity=".9"/>
 </svg><b>Acervo Essencial</b></a>
-  <nav class="menu"><a href="index.html#cadernos">Os cadernos</a><a href="index.html#kit">Kit completo</a>
+  <nav class="menu"><a href="index.html#dentro">Os cadernos</a><a href="index.html#kit">Kit completo</a>
   <a href="index.html#amostra">Amostra grátis</a></nav>
 </header>
 
@@ -235,9 +238,24 @@ footer .links a { margin-right: 4px; }
       </div>
       <p class="nota">PDF de 43 páginas em A4. Imprime em casa quantas vezes quiser.</p>
     </div>
-    <img src="paginas_P04.png" alt="Capa e páginas do caderno Olhos Atentos" width="1080" height="880">
+    <img src="img/mesa_p4.jpg" alt="Páginas reais do caderno Olhos Atentos sobre a mesa" width="1400" height="1050" fetchpriority="high">
   </div>
 </section>
+
+<section id="dentro">
+  <div class="box rolo">
+    <div class="cab"><div><h2 style="margin:0">Veja por dentro: 28 páginas do caderno</h2>
+      <p class="dica">Páginas reais, do jeito que saem na impressora. Toque para ampliar e arraste para o lado.</p></div><div class="setas"><button type="button" data-rolar="-1" aria-label="Voltar">&lsaquo;</button><button type="button" data-rolar="1" aria-label="Avançar">&rsaquo;</button></div></div>
+    <div data-grupo><div class="galeria"><button type="button" data-zoom="img/pg/p4-12.jpg" data-legenda="Olhos Atentos · página 12 de 43"><img src="img/pg/p4-12.jpg" alt="Olhos Atentos: página 12" loading="lazy" width="900" height="1273"><span>Página 12</span></button><button type="button" data-zoom="img/pg/p4-13.jpg" data-legenda="Olhos Atentos · página 13 de 43"><img src="img/pg/p4-13.jpg" alt="Olhos Atentos: página 13" loading="lazy" width="900" height="1273"><span>Página 13</span></button><button type="button" data-zoom="img/pg/p4-14.jpg" data-legenda="Olhos Atentos · página 14 de 43"><img src="img/pg/p4-14.jpg" alt="Olhos Atentos: Ache as diferenças" loading="lazy" width="900" height="1273"><span>Ache as diferenças</span></button><button type="button" data-zoom="img/pg/p4-15.jpg" data-legenda="Olhos Atentos · página 15 de 43"><img src="img/pg/p4-15.jpg" alt="Olhos Atentos: página 15" loading="lazy" width="900" height="1273"><span>Página 15</span></button><button type="button" data-zoom="img/pg/p4-16.jpg" data-legenda="Olhos Atentos · página 16 de 43"><img src="img/pg/p4-16.jpg" alt="Olhos Atentos: Caça às estrelas" loading="lazy" width="900" height="1273"><span>Caça às estrelas</span></button><button type="button" data-zoom="img/pg/p4-17.jpg" data-legenda="Olhos Atentos · página 17 de 43"><img src="img/pg/p4-17.jpg" alt="Olhos Atentos: Caça aos peixes" loading="lazy" width="900" height="1273"><span>Caça aos peixes</span></button><button type="button" data-zoom="img/pg/p4-18.jpg" data-legenda="Olhos Atentos · página 18 de 43"><img src="img/pg/p4-18.jpg" alt="Olhos Atentos: página 18" loading="lazy" width="900" height="1273"><span>Página 18</span></button><button type="button" data-zoom="img/pg/p4-19.jpg" data-legenda="Olhos Atentos · página 19 de 43"><img src="img/pg/p4-19.jpg" alt="Olhos Atentos: página 19" loading="lazy" width="900" height="1273"><span>Página 19</span></button><button type="button" data-zoom="img/pg/p4-20.jpg" data-legenda="Olhos Atentos · página 20 de 43"><img src="img/pg/p4-20.jpg" alt="Olhos Atentos: página 20" loading="lazy" width="900" height="1273"><span>Página 20</span></button><button type="button" data-zoom="img/pg/p4-21.jpg" data-legenda="Olhos Atentos · página 21 de 43"><img src="img/pg/p4-21.jpg" alt="Olhos Atentos: O que sumiu?" loading="lazy" width="900" height="1273"><span>O que sumiu?</span></button><button type="button" data-zoom="img/pg/p4-22.jpg" data-legenda="Olhos Atentos · página 22 de 43"><img src="img/pg/p4-22.jpg" alt="Olhos Atentos: página 22" loading="lazy" width="900" height="1273"><span>Página 22</span></button><button type="button" data-zoom="img/pg/p4-23.jpg" data-legenda="Olhos Atentos · página 23 de 43"><img src="img/pg/p4-23.jpg" alt="Olhos Atentos: página 23" loading="lazy" width="900" height="1273"><span>Página 23</span></button><button type="button" data-zoom="img/pg/p4-24.jpg" data-legenda="Olhos Atentos · página 24 de 43"><img src="img/pg/p4-24.jpg" alt="Olhos Atentos: Continue o padrão" loading="lazy" width="900" height="1273"><span>Continue o padrão</span></button><button type="button" data-zoom="img/pg/p4-25.jpg" data-legenda="Olhos Atentos · página 25 de 43"><img src="img/pg/p4-25.jpg" alt="Olhos Atentos: página 25" loading="lazy" width="900" height="1273"><span>Página 25</span></button><button type="button" data-zoom="img/pg/p4-26.jpg" data-legenda="Olhos Atentos · página 26 de 43"><img src="img/pg/p4-26.jpg" alt="Olhos Atentos: página 26" loading="lazy" width="900" height="1273"><span>Página 26</span></button><button type="button" data-zoom="img/pg/p4-27.jpg" data-legenda="Olhos Atentos · página 27 de 43"><img src="img/pg/p4-27.jpg" alt="Olhos Atentos: página 27" loading="lazy" width="900" height="1273"><span>Página 27</span></button><button type="button" data-zoom="img/pg/p4-28.jpg" data-legenda="Olhos Atentos · página 28 de 43"><img src="img/pg/p4-28.jpg" alt="Olhos Atentos: Labirinto da abelha" loading="lazy" width="900" height="1273"><span>Labirinto da abelha</span></button><button type="button" data-zoom="img/pg/p4-29.jpg" data-legenda="Olhos Atentos · página 29 de 43"><img src="img/pg/p4-29.jpg" alt="Olhos Atentos: página 29" loading="lazy" width="900" height="1273"><span>Página 29</span></button><button type="button" data-zoom="img/pg/p4-30.jpg" data-legenda="Olhos Atentos · página 30 de 43"><img src="img/pg/p4-30.jpg" alt="Olhos Atentos: página 30" loading="lazy" width="900" height="1273"><span>Página 30</span></button><button type="button" data-zoom="img/pg/p4-31.jpg" data-legenda="Olhos Atentos · página 31 de 43"><img src="img/pg/p4-31.jpg" alt="Olhos Atentos: Copie o desenho" loading="lazy" width="900" height="1273"><span>Copie o desenho</span></button><button type="button" data-zoom="img/pg/p4-32.jpg" data-legenda="Olhos Atentos · página 32 de 43"><img src="img/pg/p4-32.jpg" alt="Olhos Atentos: página 32" loading="lazy" width="900" height="1273"><span>Página 32</span></button><button type="button" data-zoom="img/pg/p4-33.jpg" data-legenda="Olhos Atentos · página 33 de 43"><img src="img/pg/p4-33.jpg" alt="Olhos Atentos: Pise só no sapo" loading="lazy" width="900" height="1273"><span>Pise só no sapo</span></button><button type="button" data-zoom="img/pg/p4-34.jpg" data-legenda="Olhos Atentos · página 34 de 43"><img src="img/pg/p4-34.jpg" alt="Olhos Atentos: página 34" loading="lazy" width="900" height="1273"><span>Página 34</span></button><button type="button" data-zoom="img/pg/p4-35.jpg" data-legenda="Olhos Atentos · página 35 de 43"><img src="img/pg/p4-35.jpg" alt="Olhos Atentos: página 35" loading="lazy" width="900" height="1273"><span>Página 35</span></button><button type="button" data-zoom="img/pg/p4-36.jpg" data-legenda="Olhos Atentos · página 36 de 43"><img src="img/pg/p4-36.jpg" alt="Olhos Atentos: Jogo do lince" loading="lazy" width="900" height="1273"><span>Jogo do lince</span></button><button type="button" data-zoom="img/pg/p4-37.jpg" data-legenda="Olhos Atentos · página 37 de 43"><img src="img/pg/p4-37.jpg" alt="Olhos Atentos: página 37" loading="lazy" width="900" height="1273"><span>Página 37</span></button><button type="button" data-zoom="img/pg/p4-11.jpg" data-legenda="Olhos Atentos · página 11 de 43"><img src="img/pg/p4-11.jpg" alt="Olhos Atentos: Plano de 6 semanas" loading="lazy" width="900" height="1273"><span>Plano de 6 semanas</span></button><button type="button" data-zoom="img/pg/p4-05.jpg" data-legenda="Olhos Atentos · página 5 de 43"><img src="img/pg/p4-05.jpg" alt="Olhos Atentos: Guia: o que diz a pesquisa" loading="lazy" width="900" height="1273"><span>Guia: o que diz a pesquisa</span></button></div></div>
+  </div>
+</section>
+<section class="creme">
+  <div class="box">
+    <h2>As 43 páginas, todas de uma vez</h2>
+    <div class="parede" data-grupo style="grid-template-columns:1fr;max-width:820px"><button type="button" data-zoom="img/todas_p4.jpg" data-legenda="Olhos Atentos: as 43 páginas"><img src="img/todas_p4.jpg" alt="Miniaturas de todas as 43 páginas do caderno Olhos Atentos" loading="lazy"><span>Olhos Atentos <small>· 43 páginas, 24 atividades · toque para ampliar</small></span></button></div>
+  </div>
+</section>
+
 
 <section class="dor">
   <div class="box foto-txt">
@@ -284,14 +302,6 @@ footer .links a { margin-right: 4px; }
       <ul class="lista"><li><b>Guia do adulto (6 páginas):</b> as 6 habilidades, o que diz a pesquisa, roteiro da sessão, estratégias e quando procurar um profissional</li><li><b>Ponto de partida e de chegada:</b> 5 tarefas rápidas, para comparar</li><li><b>Plano de 6 semanas,</b> de segunda a sexta</li><li><b>24 atividades</b> nas 6 etapas, com labirintos e desenhos de ligar pontos</li><li><b>Jogo do lince</b> com tabuleiro e 20 cartas para recortar</li><li><b>Ficha de acompanhamento e certificado</b></li><li><b>Bônus:</b> gabarito, 10 brincadeiras sem papel e referências</li></ul>
     </div>
     <div class="trilha"><div class="etapa" style="--c:var(--coral)"><span class="n">1</span><div><b>Olhar e comparar</b><p>Igual, diferente, figuras viradas e letras espelhadas.</p></div></div><div class="etapa" style="--c:var(--mostarda)"><span class="n">2</span><div><b>Procurar</b><p>Achar um alvo no meio de outros e contar.</p></div></div><div class="etapa" style="--c:var(--salvia)"><span class="n">3</span><div><b>Lembrar</b><p>Quais figuras, em que ordem e em que lugar.</p></div></div><div class="etapa" style="--c:var(--petroleo)"><span class="n">4</span><div><b>Sequências e direções</b><p>Padrões, sequências e setas.</p></div></div><div class="etapa" style="--c:var(--coral)"><span class="n">5</span><div><b>Espaço e cópia</b><p>Labirintos, ligar pontos e copiar desenhos.</p></div></div><div class="etapa" style="--c:var(--mostarda)"><span class="n">6</span><div><b>Atenção e controle</b><p>Linhas cruzadas, pisar só no sapo e o jogo do contrário.</p></div></div></div>
-  </div>
-</section>
-
-<section>
-  <div class="box">
-    <h2>Veja por dentro</h2>
-    <p>Estas são páginas reais do caderno, do jeito que saem na impressora.</p>
-    <div class="paginas p6"><figure><img src="p4_pag05.jpg" alt="Guia: o que diz a pesquisa" loading="lazy"><figcaption>Guia: o que diz a pesquisa</figcaption></figure><figure><img src="p4_pag11.jpg" alt="Plano de 6 semanas" loading="lazy"><figcaption>Plano de 6 semanas</figcaption></figure><figure><img src="p4_pag14.jpg" alt="Ache as diferenças" loading="lazy"><figcaption>Ache as diferenças</figcaption></figure><figure><img src="p4_pag16.jpg" alt="Caça às estrelas" loading="lazy"><figcaption>Caça às estrelas</figcaption></figure><figure><img src="p4_pag28.jpg" alt="Labirinto da abelha" loading="lazy"><figcaption>Labirinto da abelha</figcaption></figure><figure><img src="p4_pag33.jpg" alt="Pise só no sapo" loading="lazy"><figcaption>Pise só no sapo</figcaption></figure></div>
   </div>
 </section>
 
@@ -348,5 +358,6 @@ footer .links a { margin-right: 4px; }
 </footer>
 <div class="barra-cta"><b>Caderno · R$ 19,90</b><a class="btn cheio" href="#comprar">Quero</a></div>
 <script src="checkout.js"></script>
+<script src="galeria.js"></script>
 </body>
 </html>

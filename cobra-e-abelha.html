@@ -22,6 +22,7 @@
 <!-- SITE v04 · 21/10/2026 · links de compra em checkout.js -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Andika:wght@400;700&display=swap">
+<link rel="stylesheet" href="galeria.css">
 <style>
 :root {
   --petroleo: #1F5F7A; --coral: #E9694F; --mostarda: #F2B33D; --salvia: #7FB685;
@@ -206,6 +207,8 @@ footer a { color: #fff; }
 .legal h2 { font-size: 24px; margin-top: 34px; }
 .legal li { margin-bottom: 8px; }
 footer .links a { margin-right: 4px; }
+@media (min-width: 821px) { .hero .box { grid-template-columns: .9fr 1.3fr; } }
+@media (max-width: 820px) { .hero .box > img { order: -1; } .topo { flex-wrap: wrap; gap: 8px; } .menu { width: 100%; gap: 16px; } .menu a { font-size: 15px; } }
 </style>
 </head>
 <body>
@@ -219,7 +222,7 @@ footer .links a { margin-right: 4px; }
   <path d="M24 52 C33 51 41 53 48 57 M24 64 C33 63 41 65 48 69 M24 76 C33 75 41 77 48 81" stroke="#FFF8EE" stroke-width="3.2" stroke-linecap="round" fill="none" opacity=".85"/>
   <circle cx="84" cy="66" r="9" fill="#FFF8EE" opacity=".9"/>
 </svg><b>Acervo Essencial</b></a>
-  <nav class="menu"><a href="index.html#cadernos">Os cadernos</a><a href="index.html#kit">Kit completo</a>
+  <nav class="menu"><a href="index.html#dentro">Os cadernos</a><a href="index.html#kit">Kit completo</a>
   <a href="index.html#amostra">Amostra grátis</a></nav>
 </header>
 
@@ -235,9 +238,24 @@ footer .links a { margin-right: 4px; }
       </div>
       <p class="nota">PDF de 42 páginas em A4. Imprime em casa quantas vezes quiser.</p>
     </div>
-    <img src="paginas_P03.png" alt="Capa e páginas do caderno Cobra e Abelha" width="1080" height="880">
+    <img src="img/mesa_p3.jpg" alt="Páginas reais do caderno Cobra e Abelha sobre a mesa" width="1400" height="1050" fetchpriority="high">
   </div>
 </section>
+
+<section id="dentro">
+  <div class="box rolo">
+    <div class="cab"><div><h2 style="margin:0">Veja por dentro: 27 páginas do caderno</h2>
+      <p class="dica">Páginas reais, do jeito que saem na impressora. Toque para ampliar e arraste para o lado.</p></div><div class="setas"><button type="button" data-rolar="-1" aria-label="Voltar">&lsaquo;</button><button type="button" data-rolar="1" aria-label="Avançar">&rsaquo;</button></div></div>
+    <div data-grupo><div class="galeria"><button type="button" data-zoom="img/pg/p3-12.jpg" data-legenda="Cobra e Abelha · página 12 de 42"><img src="img/pg/p3-12.jpg" alt="Cobra e Abelha: A cobra e a abelha" loading="lazy" width="900" height="1273"><span>A cobra e a abelha</span></button><button type="button" data-zoom="img/pg/p3-13.jpg" data-legenda="Cobra e Abelha · página 13 de 42"><img src="img/pg/p3-13.jpg" alt="Cobra e Abelha: Cobra ou abelha?" loading="lazy" width="900" height="1273"><span>Cobra ou abelha?</span></button><button type="button" data-zoom="img/pg/p3-14.jpg" data-legenda="Cobra e Abelha · página 14 de 42"><img src="img/pg/p3-14.jpg" alt="Cobra e Abelha: página 14" loading="lazy" width="900" height="1273"><span>Página 14</span></button><button type="button" data-zoom="img/pg/p3-15.jpg" data-legenda="Cobra e Abelha · página 15 de 42"><img src="img/pg/p3-15.jpg" alt="Cobra e Abelha: página 15" loading="lazy" width="900" height="1273"><span>Página 15</span></button><button type="button" data-zoom="img/pg/p3-16.jpg" data-legenda="Cobra e Abelha · página 16 de 42"><img src="img/pg/p3-16.jpg" alt="Cobra e Abelha: Som comprido" loading="lazy" width="900" height="1273"><span>Som comprido</span></button><button type="button" data-zoom="img/pg/p3-17.jpg" data-legenda="Cobra e Abelha · página 17 de 42"><img src="img/pg/p3-17.jpg" alt="Cobra e Abelha: página 17" loading="lazy" width="900" height="1273"><span>Página 17</span></button><button type="button" data-zoom="img/pg/p3-18.jpg" data-legenda="Cobra e Abelha · página 18 de 42"><img src="img/pg/p3-18.jpg" alt="Cobra e Abelha: página 18" loading="lazy" width="900" height="1273"><span>Página 18</span></button><button type="button" data-zoom="img/pg/p3-19.jpg" data-legenda="Cobra e Abelha · página 19 de 42"><img src="img/pg/p3-19.jpg" alt="Cobra e Abelha: Escada da cobra e da abelha" loading="lazy" width="900" height="1273"><span>Escada da cobra e da abelha</span></button><button type="button" data-zoom="img/pg/p3-20.jpg" data-legenda="Cobra e Abelha · página 20 de 42"><img src="img/pg/p3-20.jpg" alt="Cobra e Abelha: página 20" loading="lazy" width="900" height="1273"><span>Página 20</span></button><button type="button" data-zoom="img/pg/p3-21.jpg" data-legenda="Cobra e Abelha · página 21 de 42"><img src="img/pg/p3-21.jpg" alt="Cobra e Abelha: página 21" loading="lazy" width="900" height="1273"><span>Página 21</span></button><button type="button" data-zoom="img/pg/p3-22.jpg" data-legenda="Cobra e Abelha · página 22 de 42"><img src="img/pg/p3-22.jpg" alt="Cobra e Abelha: página 22" loading="lazy" width="900" height="1273"><span>Página 22</span></button><button type="button" data-zoom="img/pg/p3-23.jpg" data-legenda="Cobra e Abelha · página 23 de 42"><img src="img/pg/p3-23.jpg" alt="Cobra e Abelha: Caminho do sapo" loading="lazy" width="900" height="1273"><span>Caminho do sapo</span></button><button type="button" data-zoom="img/pg/p3-24.jpg" data-legenda="Cobra e Abelha · página 24 de 42"><img src="img/pg/p3-24.jpg" alt="Cobra e Abelha: página 24" loading="lazy" width="900" height="1273"><span>Página 24</span></button><button type="button" data-zoom="img/pg/p3-25.jpg" data-legenda="Cobra e Abelha · página 25 de 42"><img src="img/pg/p3-25.jpg" alt="Cobra e Abelha: página 25" loading="lazy" width="900" height="1273"><span>Página 25</span></button><button type="button" data-zoom="img/pg/p3-26.jpg" data-legenda="Cobra e Abelha · página 26 de 42"><img src="img/pg/p3-26.jpg" alt="Cobra e Abelha: página 26" loading="lazy" width="900" height="1273"><span>Página 26</span></button><button type="button" data-zoom="img/pg/p3-27.jpg" data-legenda="Cobra e Abelha · página 27 de 42"><img src="img/pg/p3-27.jpg" alt="Cobra e Abelha: página 27" loading="lazy" width="900" height="1273"><span>Página 27</span></button><button type="button" data-zoom="img/pg/p3-28.jpg" data-legenda="Cobra e Abelha · página 28 de 42"><img src="img/pg/p3-28.jpg" alt="Cobra e Abelha: Doce ou doze?" loading="lazy" width="900" height="1273"><span>Doce ou doze?</span></button><button type="button" data-zoom="img/pg/p3-29.jpg" data-legenda="Cobra e Abelha · página 29 de 42"><img src="img/pg/p3-29.jpg" alt="Cobra e Abelha: página 29" loading="lazy" width="900" height="1273"><span>Página 29</span></button><button type="button" data-zoom="img/pg/p3-30.jpg" data-legenda="Cobra e Abelha · página 30 de 42"><img src="img/pg/p3-30.jpg" alt="Cobra e Abelha: página 30" loading="lazy" width="900" height="1273"><span>Página 30</span></button><button type="button" data-zoom="img/pg/p3-31.jpg" data-legenda="Cobra e Abelha · página 31 de 42"><img src="img/pg/p3-31.jpg" alt="Cobra e Abelha: página 31" loading="lazy" width="900" height="1273"><span>Página 31</span></button><button type="button" data-zoom="img/pg/p3-32.jpg" data-legenda="Cobra e Abelha · página 32 de 42"><img src="img/pg/p3-32.jpg" alt="Cobra e Abelha: Trava-línguas" loading="lazy" width="900" height="1273"><span>Trava-línguas</span></button><button type="button" data-zoom="img/pg/p3-33.jpg" data-legenda="Cobra e Abelha · página 33 de 42"><img src="img/pg/p3-33.jpg" alt="Cobra e Abelha: História para ler junto" loading="lazy" width="900" height="1273"><span>História para ler junto</span></button><button type="button" data-zoom="img/pg/p3-34.jpg" data-legenda="Cobra e Abelha · página 34 de 42"><img src="img/pg/p3-34.jpg" alt="Cobra e Abelha: página 34" loading="lazy" width="900" height="1273"><span>Página 34</span></button><button type="button" data-zoom="img/pg/p3-35.jpg" data-legenda="Cobra e Abelha · página 35 de 42"><img src="img/pg/p3-35.jpg" alt="Cobra e Abelha: página 35" loading="lazy" width="900" height="1273"><span>Página 35</span></button><button type="button" data-zoom="img/pg/p3-36.jpg" data-legenda="Cobra e Abelha · página 36 de 42"><img src="img/pg/p3-36.jpg" alt="Cobra e Abelha: Jogo da memória" loading="lazy" width="900" height="1273"><span>Jogo da memória</span></button><button type="button" data-zoom="img/pg/p3-11.jpg" data-legenda="Cobra e Abelha · página 11 de 42"><img src="img/pg/p3-11.jpg" alt="Cobra e Abelha: Plano de 6 semanas" loading="lazy" width="900" height="1273"><span>Plano de 6 semanas</span></button><button type="button" data-zoom="img/pg/p3-05.jpg" data-legenda="Cobra e Abelha · página 5 de 42"><img src="img/pg/p3-05.jpg" alt="Cobra e Abelha: página 5" loading="lazy" width="900" height="1273"><span>Página 5</span></button></div></div>
+  </div>
+</section>
+<section class="creme">
+  <div class="box">
+    <h2>As 42 páginas, todas de uma vez</h2>
+    <div class="parede" data-grupo style="grid-template-columns:1fr;max-width:820px"><button type="button" data-zoom="img/todas_p3.jpg" data-legenda="Cobra e Abelha: as 42 páginas"><img src="img/todas_p3.jpg" alt="Miniaturas de todas as 42 páginas do caderno Cobra e Abelha" loading="lazy"><span>Cobra e Abelha <small>· 42 páginas, 24 atividades · toque para ampliar</small></span></button></div>
+  </div>
+</section>
+
 
 <section class="dor">
   <div class="box foto-txt">
@@ -284,14 +302,6 @@ footer .links a { margin-right: 4px; }
       <ul class="lista"><li><b>Guia do adulto (6 páginas):</b> os sons S e Z, o que diz a pesquisa, as 6 etapas, roteiro da sessão, como reagir às trocas e quando procurar um fonoaudiólogo</li><li><b>Ponto de partida e de chegada:</b> avaliação com 12 palavras, para comparar</li><li><b>Plano de 6 semanas,</b> de segunda a sexta</li><li><b>24 atividades</b> nas 6 etapas, com trava-línguas e uma história</li><li><b>Jogo da memória</b> com 12 cartas para recortar</li><li><b>Ficha de acompanhamento e certificado</b></li><li><b>Bônus:</b> o S e o Z na escrita, 10 brincadeiras e referências</li></ul>
     </div>
     <div class="trilha"><div class="etapa" style="--c:var(--coral)"><span class="n">1</span><div><b>Ouvir</b><p>Perceber a diferença entre a cobra (S) e a abelha (Z).</p></div></div><div class="etapa" style="--c:var(--mostarda)"><span class="n">2</span><div><b>Som e sílabas</b><p>Fazer os dois sons sozinhos e em sílabas.</p></div></div><div class="etapa" style="--c:var(--salvia)"><span class="n">3</span><div><b>Palavras com S</b><p>No começo, no meio e no fim das palavras.</p></div></div><div class="etapa" style="--c:var(--petroleo)"><span class="n">4</span><div><b>Palavras com Z</b><p>Inclusive quando o Z é escrito com S, como em CASA.</p></div></div><div class="etapa" style="--c:var(--coral)"><span class="n">5</span><div><b>Pares que mudam o sentido</b><p>DOCE e DOZE, CASA e CAÇA.</p></div></div><div class="etapa" style="--c:var(--mostarda)"><span class="n">6</span><div><b>Frases e histórias</b><p>Trava-línguas, frases e a história de Sissi e Zazá.</p></div></div></div>
-  </div>
-</section>
-
-<section>
-  <div class="box">
-    <h2>Veja por dentro</h2>
-    <p>Estas são páginas reais do caderno, do jeito que saem na impressora.</p>
-    <div class="paginas p6"><figure><img src="p3_pag05.jpg" alt="Guia: o que diz a pesquisa" loading="lazy"><figcaption>Guia: o que diz a pesquisa</figcaption></figure><figure><img src="p3_pag11.jpg" alt="Plano de 6 semanas" loading="lazy"><figcaption>Plano de 6 semanas</figcaption></figure><figure><img src="p3_pag13.jpg" alt="Cobra ou abelha?" loading="lazy"><figcaption>Cobra ou abelha?</figcaption></figure><figure><img src="p3_pag17.jpg" alt="Sílabas da cobra" loading="lazy"><figcaption>Sílabas da cobra</figcaption></figure><figure><img src="p3_pag29.jpg" alt="Qual eu falei?" loading="lazy"><figcaption>Qual eu falei?</figcaption></figure><figure><img src="p3_pag33.jpg" alt="História: Sissi e Zazá" loading="lazy"><figcaption>História: Sissi e Zazá</figcaption></figure></div>
   </div>
 </section>
 
@@ -348,5 +358,6 @@ footer .links a { margin-right: 4px; }
 </footer>
 <div class="barra-cta"><b>Caderno · R$ 19,90</b><a class="btn cheio" href="#comprar">Quero</a></div>
 <script src="checkout.js"></script>
+<script src="galeria.js"></script>
 </body>
 </html>

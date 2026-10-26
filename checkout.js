@@ -4,7 +4,9 @@ var CHECKOUT = {
   p01: "https://chk.eduzz.com/40QR7Z1Q9B",
   p02: "https://chk.eduzz.com/Z0B1RNEJ9A",
   p03: "https://chk.eduzz.com/E9OGXJ8GWB",
-  p04: "https://chk.eduzz.com/R9JXOZ7P0X"
+  p04: "https://chk.eduzz.com/R9JXOZ7P0X",
+  cal27: "",
+  cal27free: ""
 };
 // Nome e preço de cada produto, para os eventos do Pixel.
 var PRODUTO = {
@@ -12,7 +14,9 @@ var PRODUTO = {
   p01: ["Brincando com os Sons", 19.90],
   p02: ["Letras que Viram Palavras", 19.90],
   p03: ["Cobra e Abelha", 19.90],
-  p04: ["Olhos Atentos", 19.90]
+  p04: ["Olhos Atentos", 19.90],
+  cal27: ["Calendário 2027 Interativo", 9.90],
+  cal27free: ["Calendário Pedagógico 2027 (grátis)", 0]
 };
 function evento(nome, chave) {
   if (!window.fbq) return;
@@ -26,6 +30,7 @@ document.querySelectorAll("[data-checkout]").forEach(function (a) {
     a.href = url; a.rel = "noopener";
     a.addEventListener("click", function () { evento("InitiateCheckout", chave); });
   }
+  else if (chave.indexOf("cal27") === 0) { /* calendário: mantém a âncora da página até o link existir */ }
   else {
     a.href = a.closest("body").querySelector("#amostra") ? "#amostra" : "index.html#amostra";
     a.textContent = "Vendas abrem em breve · baixe a amostra grátis";

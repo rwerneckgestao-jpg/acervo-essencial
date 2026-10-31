@@ -19,11 +19,11 @@ var PRODUTO = {
   p02: ["Letras que Viram Palavras", 19.90],
   p03: ["Cobra e Abelha", 19.90],
   p04: ["Olhos Atentos", 19.90],
-  t01: ["Fala em Foco", 37],
-  t02: ["Motricidade Orofacial", 37],
-  t03: ["Comunica", 37],
-  t04: ["Emoções e Regulação", 37],
-  colecao: ["Coleção com os 4 kits", 97]
+  t01: ["Fala em Foco", 19.90],
+  t02: ["Motricidade Orofacial", 19.90],
+  t03: ["Comunica", 19.90],
+  t04: ["Emoções e Regulação", 19.90],
+  colecao: ["Coleção com os 4 kits", 47]
 };
 var WHATSAPP = "5562993375885";
 // Parâmetros de rastreamento: guardados na primeira visita e repassados ao checkout.

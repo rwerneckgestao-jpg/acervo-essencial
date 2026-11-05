@@ -6,11 +6,11 @@ var CHECKOUT = {
   p02: "https://chk.eduzz.com/Z0B1RNEJ9A",
   p03: "https://chk.eduzz.com/E9OGXJ8GWB",
   p04: "https://chk.eduzz.com/R9JXOZ7P0X",
-  t01: "",
-  t02: "",
-  t03: "",
-  t04: "",
-  colecao: ""
+  t01: "https://chk.eduzz.com/744a644r",
+  t02: "https://chk.eduzz.com/hxsr2lj6",
+  t03: "https://chk.eduzz.com/l3rbcti6",
+  t04: "https://chk.eduzz.com/35sqxybl",
+  colecao: "https://chk.eduzz.com/ouaaeqxn"
 };
 // Nome e preço de cada produto, para os eventos do Pixel e a mensagem do WhatsApp.
 var PRODUTO = {

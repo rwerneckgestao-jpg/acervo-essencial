@@ -10,7 +10,11 @@ var CHECKOUT = {
   t02: "https://chk.eduzz.com/hxsr2lj6",
   t03: "https://chk.eduzz.com/l3rbcti6",
   t04: "https://chk.eduzz.com/35sqxybl",
-  colecao: "https://chk.eduzz.com/ouaaeqxn"
+  colecao: "https://chk.eduzz.com/ouaaeqxn",
+  cal27: "",
+  cal27free: "",
+  b05: "",
+  p06: ""
 };
 // Nome e preço de cada produto, para os eventos do Pixel e a mensagem do WhatsApp.
 var PRODUTO = {
@@ -23,7 +27,11 @@ var PRODUTO = {
   t02: ["Motricidade Orofacial", 19.90],
   t03: ["Comunica", 19.90],
   t04: ["Emoções e Regulação", 19.90],
-  colecao: ["Coleção com os 4 kits", 47]
+  colecao: ["Coleção com os 4 kits", 47],
+  cal27: ["Calendário 2027 Interativo", 9.90],
+  cal27free: ["Calendário Pedagógico 2027 (grátis)", 0],
+  b05: ["Bingo dos Sons", 9.90],
+  p06: ["Rotina Previsível", 19.90]
 };
 var WHATSAPP = "5562993375885";
 // Parâmetros de rastreamento: guardados na primeira visita e repassados ao checkout.
@@ -60,6 +68,7 @@ document.querySelectorAll("[data-checkout]").forEach(function (a) {
     a.textContent = a.getAttribute("data-avise") || "Avise-me no lançamento";
     a.addEventListener("click", function () { evento("Contact", chave); });
   }
+  else if (chave.indexOf("cal27") === 0) { /* calendário: mantém a âncora da página até o link existir */ }
   else {
     a.href = a.closest("body").querySelector("#amostra") ? "#amostra" : "index.html#amostra";
     a.textContent = "Vendas abrem em breve · baixe a amostra grátis";

@@ -241,6 +241,15 @@ footer .links a { margin-right: 4px; }
 .linha-nova p { font-family: 'Segoe UI', sans-serif; color: #1F2A2E; }
 .ln-olho { font-size: 13px; letter-spacing: .16em; text-transform: uppercase; font-weight: 700; color: #9A4A32 !important; margin: 0 0 6px; }
 .ln-btn { display: inline-block; background: #1F2A2E; color: #fff; text-decoration: none; font-weight: 700; padding: 13px 22px; border-radius: 8px; }
+.mais { padding: 52px 0; }
+.mais .grade3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 8px; }
+.mais a.cm { display: flex; flex-direction: column; background: #fff; border: 1px solid var(--linha); border-radius: 14px; overflow: hidden; text-decoration: none; color: var(--tinta); }
+.mais a.cm img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; background: var(--creme); }
+.mais a.cm div { padding: 16px 18px 20px; display: flex; flex-direction: column; gap: 4px; flex: 1; }
+.mais a.cm b { font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 21px; color: var(--petroleo); }
+.mais a.cm span { font-size: 16px; color: var(--cinza); }
+.mais a.cm em { font-style: normal; font-weight: 700; color: var(--coral); margin-top: auto; padding-top: 8px; }
+@media (max-width: 820px) { .mais .grade3 { grid-template-columns: 1fr; } }
 @media (max-width: 820px) { .linha-nova .box { grid-template-columns: 1fr; gap: 20px; } .ln-btn { width: 100%; text-align: center; } }
 </style>
 </head>
@@ -256,7 +265,7 @@ footer .links a { margin-right: 4px; }
   <circle cx="84" cy="66" r="9" fill="#FFF8EE" opacity=".9"/>
 </svg><b>Acervo Essencial</b></a>
   <nav class="menu"><a href="index.html#dentro">Os cadernos</a><a href="index.html#kit">Kit completo</a>
-  <a href="index.html#amostra">Amostra grátis</a><a href="kits-terapeuticos.html">Kits terapêuticos</a></nav>
+  <a href="index.html#amostra">Amostra grátis</a><a href="kits-terapeuticos.html">Kits terapêuticos</a><a href="index.html#mais">Mais materiais</a></nav>
 </header>
 
 <section class="hero">
@@ -283,6 +292,17 @@ footer .links a { margin-right: 4px; }
       <h2>Kits terapêuticos para fonoaudiologia e psicologia infantil</h2>
       <p>Fala em Foco, Motricidade Orofacial, Comunica (TEA e comunicação alternativa) e Emoções e Regulação. Avaliação, atividades, programa para casa e registro. R$ 19,90 cada, ou os 4 por R$ 47.</p>
       <a class="ln-btn" href="kits-terapeuticos.html">Conhecer os kits</a>
+    </div>
+  </div>
+</section>
+
+<section class="mais" id="mais" aria-label="Mais materiais">
+  <div class="box">
+    <h2>Mais materiais para imprimir</h2>
+    <div class="grade3">
+      <a class="cm" href="bingo-dos-sons.html"><img src="img/capa_b5.jpg" alt="Capa do Bingo dos Sons" loading="lazy" width="1080" height="1080"><div><b>Bingo dos Sons</b><span>3 bingos de primeiro som, rimas e sílabas. 96 cartelas, 4 a 7 anos.</span><em>R$ 9,90 · ver por dentro</em></div></a>
+      <a class="cm" href="rotina-previsivel.html"><img src="img/capa_p6.jpg" alt="Capa da Rotina Previsível" loading="lazy" width="1080" height="1080"><div><b>Rotina Previsível</b><span>Quadros, 80 cartões, 12 rotinas e 8 histórias sociais, 3 a 8 anos.</span><em>R$ 19,90 · ver por dentro</em></div></a>
+      <a class="cm" href="calendario-2027.html"><img src="img/cal27/og_calendario_2027.jpg" alt="Calendário Pedagógico 2027" loading="lazy" style="object-position:top"><div><b>Calendário Pedagógico 2027</b><span>92 datas e 184 ideias de atividade para sala de aula e atendimento.</span><em>PDF grátis · interativo R$ 9,90</em></div></a>
     </div>
   </div>
 </section>

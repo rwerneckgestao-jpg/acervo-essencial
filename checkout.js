@@ -13,8 +13,8 @@ var CHECKOUT = {
   colecao: "https://chk.eduzz.com/ouaaeqxn",
   cal27: "",
   cal27free: "",
-  b05: "",
-  p06: ""
+  b05: "https://chk.eduzz.com/4qqzqvhw",
+  p06: "https://chk.eduzz.com/va2yf4qm"
 };
 // Nome e preço de cada produto, para os eventos do Pixel e a mensagem do WhatsApp.
 var PRODUTO = {

@@ -11,8 +11,8 @@ var CHECKOUT = {
   t03: "https://chk.eduzz.com/l3rbcti6",
   t04: "https://chk.eduzz.com/35sqxybl",
   colecao: "https://chk.eduzz.com/ouaaeqxn",
-  cal27: "",
-  cal27free: "",
+  cal27: "https://chk.eduzz.com/39ZR7OQ7WE",
+  cal27free: "https://chk.eduzz.com/39VK6ZEKWR",
   b05: "https://chk.eduzz.com/4qqzqvhw",
   p06: "https://chk.eduzz.com/va2yf4qm"
 };

@@ -1,11 +1,20 @@
 # Textos das páginas institucionais (HTML). Sem travessões longos.
 EMAIL = "r.werneckgestao@gmail.com"
 M = f'<a href="mailto:{EMAIL}">{EMAIL}</a>'
+# Identificação do vendedor (Decreto 7.962/2013, art. 2º). Somente dados fornecidos pelo Ramon.
+VENDEDOR_NOME = "Ramon Werneck Julio"
+VENDEDOR_CPF = "097.651.476-19"  # informado pelo Ramon em 11/11/2026
+VENDEDOR_END = "Rua MDV 9, Setor Moinho dos Ventos, Goiânia/GO"
+VENDEDOR = (f'<div class="resumo-legal" id="vendedor"><b>Identificação do vendedor</b><br>'
+  f'Acervo Essencial, marca de {VENDEDOR_NOME}, CPF {VENDEDOR_CPF}.<br>Endereço: {VENDEDOR_END}.<br>'
+  f'E-mail: {M} · WhatsApp <a href="https://wa.me/5562993375885" target="_blank" rel="noopener">(62) 99337-5885</a>.<br>'
+  f'Pagamento e entrega processados pela Eduzz, plataforma de pagamentos que intermedia a venda.</div>')
 
 POLITICA = f'''
 <p class="atualizado">Atualizada em 11 de novembro de 2026</p>
 <div class="resumo-legal"><b>Em resumo:</b> este site não tem formulário próprio. Compras e cadastros para materiais gratuitos acontecem na Eduzz. Usamos o Pixel da Meta para medir visitas e anúncios. Os dados da compra (nome, e-mail, pagamento) são coletados pela Eduzz, que processa o pagamento e a entrega. Você pode pedir acesso, correção ou exclusão dos seus dados pelo e-mail {M}.</div>
 <h2>1. Quem somos</h2>
+{VENDEDOR}
 <p>O Acervo Essencial vende materiais educativos digitais: cadernos de atividades, kits de apoio terapêutico, jogos para imprimir e o Calendário Pedagógico 2027. Somos os responsáveis (controladores) pelos dados tratados neste site, nos termos da Lei Geral de Proteção de Dados (Lei 13.709/2018, LGPD). Contato para qualquer assunto sobre privacidade: {M}.</p>
 <h2>2. Dados coletados quando você visita o site</h2>
 <ul>
@@ -52,6 +61,7 @@ TERMOS = f'''
 <div class="resumo-legal"><b>Em resumo:</b> você compra materiais digitais (PDF para imprimir e, no Calendário 2027, uma página que abre no navegador). Pode imprimir quantas vezes quiser para usar em casa, com a sua turma ou com os seus pacientes. Não pode revender nem compartilhar os arquivos. Você tem 7 dias para desistir e receber o valor de volta.</div>
 <h2>1. Sobre estes termos</h2>
 <p>Estes termos valem para o uso deste site e para a compra dos materiais do Acervo Essencial. Ao comprar, você concorda com eles. Dúvidas: {M}.</p>
+{VENDEDOR}
 <h2>2. O que é vendido</h2>
 <p>Materiais educativos em formato digital: cadernos de atividades, kits de apoio terapêutico, jogos para imprimir e o Calendário Pedagógico 2027 (PDF gratuito e versão interativa para o navegador). Os arquivos em PDF são no tamanho A4. Nenhum produto físico é enviado. O conteúdo, o número de páginas e, quando indicada, a faixa de idade de cada material estão descritos na página dele. Os kits e coleções reúnem os materiais listados na própria página.</p>
 <h2>3. Preço e pagamento</h2>
@@ -101,6 +111,7 @@ SOBRE = f'''
 <h2>O que não fazemos</h2>
 <p>Não fazemos diagnóstico nem tratamento. Nossos materiais apoiam o trabalho da família, da escola e dos profissionais, e não substituem nenhum deles. Também não usamos depoimentos inventados, contadores falsos ou promoções com prazo fictício.</p>
 <h2>Fale com a gente</h2>
+{VENDEDOR}
 <p>WhatsApp <a href="https://wa.me/5562993375885" target="_blank" rel="noopener">(62) 99337-5885</a> ou e-mail {M}. Veja também a <a href="ajuda.html">Central de ajuda</a>.</p>
 '''
 

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://rwerneckgestao-jpg.github.io/acervo-essencial/sitemap.xml

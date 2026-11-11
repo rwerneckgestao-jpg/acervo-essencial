@@ -74,9 +74,9 @@ document.querySelectorAll("[data-checkout]").forEach(function (a) {
     a.textContent = "Vendas abrem em breve · baixe a amostra grátis";
   }
 });
-// Página de produto: ViewContent do caderno (ou do kit, na página principal).
-var principal = document.querySelector("[data-checkout]");
-if (principal) evento("ViewContent", principal.getAttribute("data-checkout"));
+// Página de produto: ViewContent do material da página.
+var principal = document.querySelector("[data-produto]") || document.querySelector("[data-checkout]");
+if (principal) evento("ViewContent", principal.getAttribute("data-produto") || principal.getAttribute("data-checkout"));
 // Download da amostra grátis conta como Lead.
 document.querySelectorAll('a[href$=".pdf"]').forEach(function (a) {
   a.addEventListener("click", function () { if (window.fbq) fbq("track", "Lead", { content_name: "Amostra grátis" }); });

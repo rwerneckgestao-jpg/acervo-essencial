@@ -2,11 +2,11 @@
 EMAIL = "r.werneckgestao@gmail.com"
 M = f'<a href="mailto:{EMAIL}">{EMAIL}</a>'
 # Identificação do vendedor (Decreto 7.962/2013, art. 2º). Somente dados fornecidos pelo Ramon.
-# CPF ou CNPJ: ainda não informado. Não inventar; incluir aqui quando o Ramon enviar.
 VENDEDOR_NOME = "Ramon Werneck Julio"
+VENDEDOR_CPF = "097.651.476-19"  # informado pelo Ramon em 11/11/2026
 VENDEDOR_END = "Rua MDV 9, Setor Moinho dos Ventos, Goiânia/GO"
 VENDEDOR = (f'<div class="resumo-legal" id="vendedor"><b>Identificação do vendedor</b><br>'
-  f'Acervo Essencial, marca de {VENDEDOR_NOME}.<br>Endereço: {VENDEDOR_END}.<br>'
+  f'Acervo Essencial, marca de {VENDEDOR_NOME}, CPF {VENDEDOR_CPF}.<br>Endereço: {VENDEDOR_END}.<br>'
   f'E-mail: {M} · WhatsApp <a href="https://wa.me/5562993375885" target="_blank" rel="noopener">(62) 99337-5885</a>.<br>'
   f'Pagamento e entrega processados pela Eduzz, plataforma de pagamentos que intermedia a venda.</div>')
 

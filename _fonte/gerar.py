@@ -35,6 +35,7 @@ def galeria(p):
     return g
 
 def idade_txt(p):
+    if p.get("idade_rotulo"): return p["idade_rotulo"]
     if not p.get("idade"): return None
     a, b = p["idade"]
     return f"{a} a {b} anos"
@@ -251,7 +252,7 @@ def pagina_inicial():
       {grade(pf['produtos'][:3], 'mini-grade')}
       <a class="btn btn-linha" href="{pf['arquivo']}.html">Ver tudo para {e(pf['titulo'].replace('Para ', ''))} {ic("seta", "")}</a>
     </div>''' for i, pf in enumerate(PERFIS))
-    destaques = ["kit", "colecao", "p06", "t03", "p01", "b05", "t04", "p02"]
+    destaques = ["kit", "colecao", "fono3", "p06", "t08", "t03", "p01", "t06"]
     videos = [
       ("pessoas_mae", "Em casa", "Mãe e filha numa atividade de papel à mesa", True),
       ("p01", "Por dentro: Brincando com os Sons", "Páginas reais do caderno", False),
@@ -327,7 +328,7 @@ def pagina_inicial():
 
 <section class="secao" id="destaques">
   <div class="envoltorio">
-    <div class="cabeca-secao surge"><div><p class="sobretitulo">Destaques do acervo</p><h2>Os materiais mais completos da loja</h2><p class="intro">Toque num material para ver as páginas por dentro, para quem é indicado e como usar.</p></div><a class="link-seta" href="loja.html">Ver os 13 materiais {ic("seta", "")}</a></div>
+    <div class="cabeca-secao surge"><div><p class="sobretitulo">Destaques do acervo</p><h2>Os materiais mais completos da loja</h2><p class="intro">Toque num material para ver as páginas por dentro, para quem é indicado e como usar.</p></div><a class="link-seta" href="loja.html">Ver os {len(PRODUTOS)} materiais {ic("seta", "")}</a></div>
     {grade(destaques)}
   </div>
 </section>
@@ -580,7 +581,7 @@ def pagina_produto(p):
     fr = []
     fr.append(("Idade", idade_txt(p) or ("Adultos" if p["tipo"] == "app" else "Conforme avaliação")))
     fr.append(("Páginas", str(p["paginas"]) if p["tipo"] != "app" else "92 datas"))
-    fr.append(("Formato", "App + PDF" if p["tipo"] == "app" else "PDF A4"))
+    fr.append(("Formato", p.get("formato") or ("App + PDF" if p["tipo"] == "app" else "PDF A4")))
     ficha_rapida = "".join(f'<li>{e(a)}<b>{e(b)}</b></li>' for a, b in fr)
     chave = p["id"]
     if p.get("gratis"):
@@ -593,13 +594,14 @@ def pagina_produto(p):
     de = f'<s>{reais(p["de"])}</s>' if p.get("de") else ""
     obs = (f'Comprando separados: {reais(p["de"])}. Economia de {reais(p["de"] - p["preco"])}.' if p.get("de") else
            ("PDF grátis com cadastro na Eduzz, ou versão interativa por R$ 9,90." if p.get("gratis") else "Pagamento único. Sem mensalidade."))
-    entrega = "Link enviado por e-mail pela Eduzz; abre no navegador" if p["tipo"] == "app" else "PDF enviado por e-mail pela Eduzz"
+    entrega = p.get("entrega") or ("Link enviado por e-mail pela Eduzz; abre no navegador" if p["tipo"] == "app" else "PDF enviado por e-mail pela Eduzz")
     trilho = "".join(f'<button type="button" data-zoom="{a}" data-legenda="{e(nome)} · {e(b)}"><img src="{a}" alt="{e(nome)}: {e(b)}" loading="lazy"><span>{e(b)}</span></button>' for a, b in g)
     murais = ""
     if p.get("todas"):
         legs = {"img/todas_p1.jpg": "Brincando com os Sons · 40 páginas", "img/todas_p2.jpg": "Letras que Viram Palavras · 48 páginas", "img/todas_p3.jpg": "Cobra e Abelha · 42 páginas",
                 "img/todas_p4.jpg": "Olhos Atentos · 43 páginas", "img/kits/todas_t01.jpg": "Fala em Foco · 43 páginas", "img/kits/todas_t02.jpg": "Motricidade Orofacial · 33 páginas",
-                "img/kits/todas_t03.jpg": "Comunica · 32 páginas", "img/kits/todas_t04.jpg": "Emoções e Regulação · 31 páginas"}
+                "img/kits/todas_t03.jpg": "Comunica · 32 páginas", "img/kits/todas_t04.jpg": "Emoções e Regulação · 31 páginas",
+                "img/kits/todas_t06.jpg": "Consultório em Ordem · 27 páginas", "img/kits/todas_t07.jpg": "Palavra Viva · 54 páginas", "img/kits/todas_t08.jpg": "Cartas de Linguagem · 30 páginas"}
         itens = "".join(f'<button type="button" data-zoom="{t}" data-legenda="{e(legs.get(t, nome + " · todas as páginas"))}"><img src="{t}" alt="Todas as páginas de {e(legs.get(t, nome))}" loading="lazy"><span>{e(legs.get(t, f"{nome} · {p[chr(112)+chr(97)+chr(103)+chr(105)+chr(110)+chr(97)+chr(115)]} páginas"))}</span></button>' for t in p["todas"])
         murais = f'<h3 style="margin-top:44px">{"Todas as páginas, sem tirar nenhuma" if len(p["todas"]) == 1 else "Todas as páginas de cada material"}</h3><div class="mural{" varios" if len(p["todas"]) > 1 else ""}" data-grupo>{itens}</div>'
     tem_video = os.path.exists(os.path.join(RAIZ, f"video/{chave}.mp4"))
@@ -615,6 +617,7 @@ def pagina_produto(p):
     inclusos = ""
     if p["id"] == "kit": inclusos = ["p01", "p02", "p03", "p04"]
     if p["id"] == "colecao": inclusos = ["t01", "t02", "t03", "t04"]
+    if p["id"] == "fono3": inclusos = ["t06", "t07", "t08"]
     inclusos_html = f'<section class="secao"><div class="envoltorio"><div class="cabeca-secao"><div><p class="sobretitulo">Incluído no combo</p><h2>Os materiais que vêm juntos</h2></div></div>{grade(inclusos)}</div></section>' if inclusos else ""
     oferece = "".join(f'<li>{ic("check", "")}<span>{e(x)}</span></li>' for x in p["oferece"])
     paraquem = "".join(f'<li>{ic("check", "")}<span>{e(x)}</span></li>' for x in p["paraquem"])
@@ -636,7 +639,7 @@ def pagina_produto(p):
         vistos.add(q); faq_u.append((q, a))
     faq_html = "".join(f'<details><summary>{e(q)}</summary><p>{e(a)}</p></details>' for q, a in faq_u)
     cat0 = C[p["categorias"][0]]
-    tabela = [("Material", p["linha"]), ("Formato", "Página que abre no navegador, mais PDF de 35 páginas" if p["tipo"] == "app" else f"PDF em A4, {p['paginas']} páginas"),
+    tabela = [("Material", p["linha"]), ("Formato", p.get("formato_longo") or ("Página que abre no navegador, mais PDF de 35 páginas" if p["tipo"] == "app" else f"PDF em A4, {p['paginas']} páginas")),
               ("Conteúdo", p["itens"]), ("Idade indicada", idade_txt(p) or ("Para adultos que planejam aulas e atendimentos" if p["tipo"] == "app" else "Definida pelo profissional, conforme a avaliação de cada criança")),
               ("Entrega", entrega), ("Impressão", "Opcional: o PDF grátis pode ser impresso" if p["tipo"] == "app" else "Em casa, na escola ou em gráfica rápida, quantas vezes precisar"), ("Garantia", "7 dias, com devolução do valor")]
     tabela_html = "".join(f'<tr><th>{e(a)}</th><td>{e(b)}</td></tr>' for a, b in tabela)

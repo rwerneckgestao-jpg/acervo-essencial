@@ -14,7 +14,11 @@ var CHECKOUT = {
   cal27: "https://chk.eduzz.com/39ZR7OQ7WE",
   cal27free: "https://chk.eduzz.com/39VK6ZEKWR",
   b05: "https://chk.eduzz.com/4qqzqvhw",
-  p06: "https://chk.eduzz.com/va2yf4qm"
+  p06: "https://chk.eduzz.com/va2yf4qm",
+  t06: "https://chk.eduzz.com/E0DKYE2N91",
+  t07: "https://chk.eduzz.com/39VK34X7WR",
+  t08: "https://chk.eduzz.com/Z0B1YD749A",
+  fono3: "https://chk.eduzz.com/39ZR3K2DWE"
 };
 // Nome e preço de cada produto, para os eventos do Pixel e a mensagem do WhatsApp.
 var PRODUTO = {
@@ -31,7 +35,11 @@ var PRODUTO = {
   cal27: ["Calendário 2027 Interativo", 9.90],
   cal27free: ["Calendário Pedagógico 2027 (grátis)", 0],
   b05: ["Bingo dos Sons", 9.90],
-  p06: ["Rotina Previsível", 19.90]
+  p06: ["Rotina Previsível", 19.90],
+  t06: ["Consultório em Ordem", 19.90],
+  t07: ["Palavra Viva", 19.90],
+  t08: ["Cartas de Linguagem", 19.90],
+  fono3: ["Combo Fono: Kits 06, 07 e 08", 47]
 };
 var WHATSAPP = "5562993375885";
 // Parâmetros de rastreamento: guardados na primeira visita e repassados ao checkout.

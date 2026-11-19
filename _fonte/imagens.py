@@ -44,8 +44,11 @@ def card(p):
     if p.get("capas"):
         capas = p["capas"]
         pos = [(-8, 255, 490), (-3, 355, 470), (3, 450, 485), (8, 545, 510)]
+        larg = 300
+        if len(capas) == 3:
+            pos = [(-7, 270, 500), (0, 400, 470), (7, 530, 505)]; larg = 360
         for (a, x, y), cp in zip(pos, capas):
-            cola(c, pagina(abre(cp), 300, a), x, y)
+            cola(c, pagina(abre(cp), larg, a), x, y)
     elif p["id"] == "cal27":
         cola(c, pagina(abre(p["capa"]), 400, -4), 330, 500)
         tel = abre("img/cal27/app_1_mes.jpg")

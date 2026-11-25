@@ -1,6 +1,16 @@
 # Textos das páginas institucionais (HTML). Sem travessões longos.
-EMAIL = "r.werneckgestao@gmail.com"
-M = f'<a href="mailto:{EMAIL}">{EMAIL}</a>'
+import os, sys
+# O e-mail de suporte não fica gravado no código: defina a variável ACERVO_EMAIL_SUPORTE antes de gerar o site.
+#   Windows (PowerShell):  $env:ACERVO_EMAIL_SUPORTE="seu-email"; python _fonte/gerar.py
+#   Linux/Mac:             ACERVO_EMAIL_SUPORTE="seu-email" python3 _fonte/gerar.py
+# Sem a variável, só gera prévia com "--previa" (o e-mail aparece como texto provisório e o site não deve ser publicado assim).
+EMAIL = os.environ.get("ACERVO_EMAIL_SUPORTE", "").strip()
+if not EMAIL:
+    if "--previa" in sys.argv:
+        EMAIL = "email-de-suporte@pendente.invalid"
+    else:
+        raise SystemExit("Defina ACERVO_EMAIL_SUPORTE com o e-mail de suporte (ou use --previa para gerar só uma prévia).")
+M =f'<a href="mailto:{EMAIL}">{EMAIL}</a>'
 # Identificação do vendedor (Decreto 7.962/2013, art. 2º). Somente dados fornecidos pelo Ramon.
 VENDEDOR_NOME = "Ramon Werneck Julio"
 VENDEDOR_CPF = "097.651.476-19"  # informado pelo Ramon em 11/11/2026

@@ -18,7 +18,9 @@ var CHECKOUT = {
   t06: "https://chk.eduzz.com/E0DKYE2N91",
   t07: "https://chk.eduzz.com/39VK34X7WR",
   t08: "https://chk.eduzz.com/Z0B1YD749A",
-  fono3: "https://chk.eduzz.com/39ZR3K2DWE"
+  fono3: "https://chk.eduzz.com/39ZR3K2DWE",
+  // Kit Grátis da Fono: produto gratuito na Eduzz ainda não criado. Vazio = botão abre o WhatsApp para pedir o kit.
+  kitgratis: ""
 };
 // Nome e preço de cada produto, para os eventos do Pixel e a mensagem do WhatsApp.
 var PRODUTO = {
@@ -39,7 +41,8 @@ var PRODUTO = {
   t06: ["Consultório em Ordem", 19.90],
   t07: ["Palavra Viva", 19.90],
   t08: ["Cartas de Linguagem", 19.90],
-  fono3: ["Combo Fono: Kits 06, 07 e 08", 47]
+  fono3: ["Combo Fono: Kits 06, 07 e 08", 47],
+  kitgratis: ["Kit Grátis da Fono", 0]
 };
 var WHATSAPP = "5562993375885";
 // Parâmetros de rastreamento: guardados na primeira visita e repassados ao checkout.
@@ -68,7 +71,8 @@ document.querySelectorAll("[data-checkout]").forEach(function (a) {
   if (url) {
     a.href = comUtm(url); a.rel = "noopener";
     if (a.getAttribute("data-comprar")) a.textContent = a.getAttribute("data-comprar");
-    a.addEventListener("click", function () { evento("InitiateCheckout", chave); });
+    // O kit gratuito não é compra: o clique fica só no evento CliqueKitGratis; o Lead dispara na página de confirmação.
+    if (chave !== "kitgratis") a.addEventListener("click", function () { evento("InitiateCheckout", chave); });
   }
   else if (a.hasAttribute("data-avise")) {
     a.href = "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(a.getAttribute("data-mensagem") || "Olá! Quero saber do lançamento do kit " + PRODUTO[chave][0]);
@@ -83,7 +87,7 @@ document.querySelectorAll("[data-checkout]").forEach(function (a) {
   }
 });
 // Página de produto: ViewContent do material da página.
-var principal = document.querySelector("[data-produto]") || document.querySelector("[data-checkout]");
+var principal = document.querySelector("[data-produto]") || document.querySelector("[data-checkout]:not([data-sem-view])");
 if (principal) evento("ViewContent", principal.getAttribute("data-produto") || principal.getAttribute("data-checkout"));
 // Download da amostra grátis conta como Lead.
 document.querySelectorAll('a[href$=".pdf"]').forEach(function (a) {

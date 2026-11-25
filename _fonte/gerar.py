@@ -10,7 +10,7 @@ BASE = "https://rwerneckgestao-jpg.github.io/acervo-essencial/"
 VERSAO = "v07"
 WHATS = "5562993375885"
 WHATS_TXT = "(62) 99337-5885"
-EMAIL = "r.werneckgestao@gmail.com"
+from paginas_texto import EMAIL  # e-mail de suporte: vem da variável de ambiente ACERVO_EMAIL_SUPORTE (ver paginas_texto.py)
 FACEBOOK = "https://www.facebook.com/profile.php?id=61595753879995"
 GAL = json.load(open(os.path.join(RAIZ, "_fonte/galerias.json")))
 P = {p["id"]: p for p in PRODUTOS}
@@ -146,7 +146,7 @@ def topo():
       <div class="sub"><button type="button" aria-expanded="false">Categorias {ic("baixo", "")}</button><div class="painel">{cats}<a class="todos" href="loja.html">Ver todos os materiais</a></div></div>
       <div class="sub"><button type="button" aria-expanded="false">Para você {ic("baixo", "")}</button><div class="painel">{perfis}</div></div>
       <a href="kits-terapeuticos.html">Kits terapêuticos</a>
-      <a href="index.html#amostra">Amostra grátis</a>
+      <a href="kit-gratis-da-fono.html">Kit Grátis da Fono</a>
     </nav>
     <div class="acoes-topo">
       <button class="icone-btn" type="button" data-abre-busca aria-label="Buscar materiais">{ic("busca", "")}</button>
@@ -159,7 +159,7 @@ def topo():
   <div class="fundo" data-fecha-menu></div>
   <nav>
     <button class="icone-btn fecha" type="button" data-fecha-menu aria-label="Fechar menu">{ic("x", "")}</button>
-    <h4>Loja</h4><a href="loja.html">Todos os materiais</a><a href="kits-terapeuticos.html">Kits terapêuticos</a><a href="kit-completo.html">Kit Completo dos cadernos</a><a href="index.html#amostra">Amostra grátis</a>
+    <h4>Loja</h4><a href="loja.html">Todos os materiais</a><a href="kits-terapeuticos.html">Kits terapêuticos</a><a href="kit-completo.html">Kit Completo dos cadernos</a><a href="kit-gratis-da-fono.html">Kit Grátis da Fono</a><a href="index.html#amostra">Amostra grátis para famílias</a>
     <h4>Categorias</h4>{gav_cats}
     <h4>Para você</h4>{gav_perfis}
     <h4>Atendimento</h4><a href="ajuda.html">Ajuda e perguntas</a><a href="https://wa.me/{WHATS}" target="_blank" rel="noopener">WhatsApp {WHATS_TXT}</a>
@@ -294,7 +294,7 @@ def pagina_inicial():
         <a class="btn btn-acao" href="loja.html">Explorar coleções {ic("seta", "")}</a>
         <a class="btn btn-linha" href="#caminhos">Encontrar materiais para minha necessidade</a>
       </div>
-      <ul class="hero-fatos"><li><b>13</b> materiais à venda</li><li><b>R$ 9,90</b> a partir de</li><li><b>7 dias</b> de garantia</li></ul>
+      <ul class="hero-fatos"><li><b>{len(PRODUTOS)}</b> materiais à venda</li><li><b>R$ 9,90</b> a partir de</li><li><b>7 dias</b> de garantia</li></ul>
     </div>
     <div class="hero-foto">
       <img src="{foto('hero_b')}" alt="Mãe e filha fazendo uma atividade de papel juntas à mesa" width="1600" height="1067" fetchpriority="high">
@@ -777,7 +777,9 @@ def grava(arquivo, conteudo):
     return arquivo
 
 if __name__ == "__main__":
-    feitos = [grava("index.html", pagina_inicial()), grava("loja.html", pagina_loja())]
+    import fono  # reposicionamento para fonoaudiólogas (25/11/2026); a página inicial anterior continua em pagina_inicial()
+    feitos = [grava("index.html", fono.pagina_inicial()), grava("loja.html", pagina_loja()), grava(fono.KIT_URL, fono.pagina_kit())]
+    grava("obrigado-kit-gratis.html", fono.pagina_obrigado())  # fora do sitemap (noindex)
     for c in CATEGORIAS: feitos.append(grava(c["arquivo"] + ".html", pagina_categoria(c)))
     for pf in PERFIS: feitos.append(grava(pf["arquivo"] + ".html", pagina_perfil(pf)))
     for p in PRODUTOS: feitos.append(grava(p["slug"] + ".html", pagina_produto(p)))
